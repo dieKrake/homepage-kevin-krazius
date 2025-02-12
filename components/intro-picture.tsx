@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 export default function IntroPicture() {
   return (
     <motion.div
-      className="relative overflow-hidden mt-4  sm:h-[400px] opacity-90 dark:opacity-90"
+      className="relative overflow-hidden mt-4  sm:h-[400px] opacity-90"
       initial={{ y: "-50%", x: 0, opacity: 0 }}
       animate={{ y: "0%", x: 0, opacity: 1 }}
     >

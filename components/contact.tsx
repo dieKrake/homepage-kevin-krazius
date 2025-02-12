@@ -30,7 +30,7 @@ export default function Contact() {
       }}
     >
       <SectionHeading>Kontakt</SectionHeading>
-      <div className="flex justify-center sm:gap-32 gap-x-10 text-gray-700 dark:text-white/80">
+      <div className="flex justify-center sm:gap-32 gap-x-10 text-white/80">
         <div className="text-left">
           <p className="mb-1">Telefon:</p>
           <p className="mb-1">Öffnungszeiten:</p>
@@ -54,13 +54,13 @@ export default function Contact() {
         </div>
       </div>
 
-      <p className="text-gray-700 dark:text-white/80 mt-12">
+      <p className=" text-white/80 mt-12">
         Bitte kontaktieren Sie mich direkt per Whatsapp, Telefon, E-Mail oder
         über folgendes Formular.
       </p>
 
       <form
-        className="mt-10 flex flex-col dark:text-black"
+        className="mt-10 flex flex-col text-black"
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
 
@@ -73,7 +73,7 @@ export default function Contact() {
         }}
       >
         <input
-          className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="h-14 px-4 rounded-lg borderBlack bg-white bg-opacity-80 focus:bg-opacity-100 transition-all outline-none"
           name="senderEmail"
           type="email"
           required
@@ -81,7 +81,7 @@ export default function Contact() {
           placeholder="Ihre E-Mail Adresse..."
         />
         <textarea
-          className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="h-52 my-3 rounded-lg borderBlack p-4 bg-white bg-opacity-80 focus:bg-opacity-100 transition-all outline-none"
           name="message"
           placeholder="Ihre Nachricht..."
           required
