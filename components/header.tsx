@@ -7,12 +7,9 @@ import { SiTheboringcompany } from "react-icons/si";
 import { links } from "@/lib/data";
 import Link from "next/link";
 import clsx from "clsx";
-import { useActiveSectionContext } from "@/context/active-section-context";
 import { usePathname } from "next/navigation";
 
 export default function Header() {
-  const { activeSection, setActiveSection, setTimeOfLastClick } =
-    useActiveSectionContext();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const pathname = usePathname(); // Holt den aktuellen Pfad
@@ -31,9 +28,13 @@ export default function Header() {
       ></motion.div>
 
       <nav className="flex fixed top-[1.5rem] left-1/2 h-12 w-full -translate-x-1/2 py-2 custom-sm:top-[0.7rem] custom-sm:h-[initial] custom-sm:py-0">
-        <div className="flex items-center">
+        <motion.div
+          className="flex items-center"
+          initial={{ y: 0, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+        >
           {/* Company Logo */}
-          <motion.div className="flex items-center bg-gray-200 custom-sm:ml-4 absolute left-1/2 -translate-x-1/2 custom-sm:left-0 custom-sm:translate-x-0 custom-sm:relative">
+          <motion.div className="flex items-center custom-sm:ml-16 absolute left-1/2 -translate-x-1/2 custom-sm:left-0 custom-sm:translate-x-0 custom-sm:relative">
             <Link href="#home" className="cursor-pointer">
               <SiTheboringcompany className="text-7xl custom-sm:text-7xl" />
             </Link>
@@ -69,15 +70,10 @@ export default function Header() {
                         <Link
                           className={clsx(
                             "flex w-full items-center justify-center px-5 py-3 hover:text-black/90 transition text-gray-500 hover:text-gray-300",
-                            {
-                              "transition text-white/80":
-                                activeSection === link.name,
-                            }
+                            {}
                           )}
                           href={link.hash}
                           onClick={() => {
-                            setActiveSection(link.name);
-                            setTimeOfLastClick(Date.now());
                             setMenuOpen(false); // Close the menu after selecting a link
                           }}
                         >
@@ -102,29 +98,11 @@ export default function Header() {
                     <Link
                       className={clsx(
                         "flex w-full items-center justify-center px-3 py-3 transition text-gray-500 hover:text-gray-300",
-                        {
-                          "transition text-white/80":
-                            activeSection === link.name,
-                        }
+                        {}
                       )}
                       href={link.hash}
-                      onClick={() => {
-                        setActiveSection(link.name);
-                        setTimeOfLastClick(Date.now());
-                      }}
                     >
                       {link.name}
-                      {link.name === activeSection && (
-                        <motion.span
-                          className="rounded-full absolute -inset-1 z-[-10] bg-gray-800"
-                          layoutId="activeSection"
-                          transition={{
-                            type: "spring",
-                            stiffness: 380,
-                            damping: 30,
-                          }}
-                        ></motion.span>
-                      )}
                     </Link>
                   </li>
                 ))}
@@ -147,7 +125,7 @@ export default function Header() {
               <BsWhatsapp className="text-3xl custom-sm:text-4xl" />
             </a>
           </motion.div>
-        </div>
+        </motion.div>
       </nav>
     </header>
   );

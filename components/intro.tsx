@@ -3,18 +3,12 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
-import { useSectionInView } from "@/lib/hooks";
-import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Intro() {
-  const { ref } = useSectionInView("Home", 0.5);
-  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
-
   return (
     <section
-      ref={ref}
       id="home"
-      className="mt-8 mb-28 max-w-[120rem] text-center md:text-left sm:mb-0 scroll-mt-[100rem] px-4 md:px-8"
+      className="mt-[-4rem] custom-sm:mt-12 mb-28 max-w-[120rem] text-center md:text-left sm:mb-0 scroll-mt-[100rem] px-4 md:px-8"
     >
       <div className="relative flex flex-col md:flex-row items-center justify-between gap-8 md:gap-40">
         <div className="mt-24 flex-1 max-w-2xl">

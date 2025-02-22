@@ -3,16 +3,10 @@
 import React, { useEffect } from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useActiveSectionContext } from "@/context/active-section-context";
-import { useSectionInView } from "@/lib/hooks";
 
 export default function About() {
-  const { ref } = useSectionInView("Über", 0.95);
-
   return (
     <motion.section
-      ref={ref}
       className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28 bg-red-300"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}

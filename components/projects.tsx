@@ -5,15 +5,10 @@ import SectionHeading from "./section-heading";
 import { projectsData } from "@/lib/data";
 import Project from "./project";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useActiveSectionContext } from "@/context/active-section-context";
-import { useSectionInView } from "@/lib/hooks";
 
 export default function Projects() {
-  const { ref } = useSectionInView("Leistungen", 0.7);
-
   return (
-    <section ref={ref} className="scroll-mt-28 mb-28 bg-blue-400" id="services">
+    <section className="scroll-mt-28 mb-28 bg-blue-400" id="services">
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
@@ -23,7 +18,6 @@ export default function Projects() {
       </motion.div>
 
       <motion.section
-        ref={ref}
         className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-12 scroll-mt-28"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}

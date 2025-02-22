@@ -1,7 +1,6 @@
 import Header from "@/components/header";
 import "./globals.css";
 import { Inter } from "next/font/google";
-import ActiveSectionContextProvider from "@/context/active-section-context";
 import Footer from "@/components/footer";
 // import ThemeSwitch from "@/components/theme-switch";
 // import ThemeContextProvider from "@/context/theme-context";
@@ -25,14 +24,13 @@ export default function RootLayout({
         className={`${inter.className} relative pt-[4.5rem] bg-gray-900 text-gray-50 text-opacity-90`}
       >
         {/* <ThemeContextProvider> */}
-        <ActiveSectionContextProvider>
-          <Header />
-          {children}
-          <Footer />
 
-          <Toaster position="top-right" />
-          {/* <ThemeSwitch /> */}
-        </ActiveSectionContextProvider>
+        <Header />
+        {children}
+        <Footer />
+
+        <Toaster position="top-right" />
+        {/* <ThemeSwitch /> */}
         {/* </ThemeContextProvider> */}
       </body>
     </html>
