@@ -10,8 +10,8 @@ import { Toaster } from "react-hot-toast";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Antik Schwarz | Christian Schwarz",
-  description: "Antik Schwarz...",
+  title: "Krazius Solutions | Kevin Krazius",
+  description: "Krazius Solutions ist...",
 };
 
 export default function RootLayout({

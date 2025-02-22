@@ -13,7 +13,7 @@ export default function Projects() {
   const { ref } = useSectionInView("Leistungen", 0.7);
 
   return (
-    <section ref={ref} className="scroll-mt-28 mb-28" id="services">
+    <section ref={ref} className="scroll-mt-28 mb-28 bg-blue-400" id="services">
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}

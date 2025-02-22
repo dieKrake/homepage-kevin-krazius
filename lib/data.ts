@@ -12,10 +12,6 @@ import globusImg from "@/public/globus-picture.jpg";
 
 export const links = [
   {
-    name: "Home",
-    hash: "#home",
-  },
-  {
     name: "Über",
     hash: "#about",
   },

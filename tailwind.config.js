@@ -13,7 +13,7 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       screens: {
-        // Füge einen benutzerdefinierten Breakpoint bei 500px hinzu
+        md: "1020px",
         "custom-sm": "1240px",
       },
     },
