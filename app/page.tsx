@@ -15,7 +15,7 @@ export default function Home() {
         <SectionDivider />
         <About />
         <Projects />
-        <Skills />
+        {/* <Skills /> */}
         <Contact />
       </div>
     </main>

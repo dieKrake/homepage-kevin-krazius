@@ -27,14 +27,14 @@ export default function Header() {
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       ></motion.div>
 
-      <nav className="flex fixed top-[1.5rem] left-1/2 h-12 w-full -translate-x-1/2 py-2 custom-sm:top-[0.7rem] custom-sm:h-[initial] custom-sm:py-0">
+      <nav className="flex fixed top-[1.5rem] left-1/2 h-12 w-full -translate-x-1/2 py-2 custom-sm:top-[0.7rem] custom-sm:h-[initial] custom-sm:py-0 max-w-screen-2xl">
         <motion.div
           className="flex items-center"
           initial={{ y: 0, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
         >
           {/* Company Logo */}
-          <motion.div className="flex items-center custom-sm:ml-16 absolute left-1/2 -translate-x-1/2 custom-sm:left-0 custom-sm:translate-x-0 custom-sm:relative">
+          <motion.div className="flex items-center custom-sm:ml-4 absolute left-1/2 -translate-x-1/2 custom-sm:left-0 custom-sm:translate-x-0 custom-sm:relative">
             <Link href="#home" className="cursor-pointer">
               <SiTheboringcompany className="text-7xl custom-sm:text-7xl" />
             </Link>
@@ -112,7 +112,7 @@ export default function Header() {
 
           {/* WhatsApp Icon */}
           <motion.div
-            className="absolute right-4 -top-0 custom-sm:top-2 transform -translate-y-1/2 rounded-full custom-sm:px-2 px-0"
+            className="absolute right-0 -top-0 custom-sm:top-2 transform -translate-y-1/2 rounded-full custom-sm:px-2 px-0"
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
           >

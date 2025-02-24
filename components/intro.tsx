@@ -3,6 +3,7 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
+import clsx from "clsx";
 
 export default function Intro() {
   return (
@@ -18,7 +19,7 @@ export default function Intro() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
           >
-            Hello, ich bin Ricardo
+            Ihre Website in professionellen Händen
           </motion.p>
 
           <motion.h1
@@ -26,7 +27,7 @@ export default function Intro() {
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            Full-Stack Entwickler mit Leidenschaft für moderne Webtechnologien
+            Moderne Webentwicklung für Ihren digitalen Erfolg
           </motion.h1>
 
           <motion.p
@@ -35,9 +36,42 @@ export default function Intro() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
           >
-            Hello, ich bin Ricardo. Mit 8 Jahren Erfahrung entwickle ich
-            maßgeschneiderte Websites und Anwendungen mit React und Next.js.
+            Kostenlosen Termin zur Analyse ihrer Website vereinbaren:
           </motion.p>
+
+          <div className="flex gap-4 mt-8">
+            <motion.button
+              className={clsx(
+                "group flex items-center justify-center gap-2 w-full px-3 py-3 rounded-full border-2 transition-all duration-300 text-gray-900 hover:text-gray-950 transform hover:scale-110 bg-gray-300 hover:bg-gray-50 border-none",
+                {}
+              )}
+              initial={{ opacity: 0, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                delay: 0.5,
+                duration: 0.9,
+                ease: "easeOut",
+              }}
+            >
+              Kostenlose Analyse
+            </motion.button>
+
+            <motion.button
+              className={clsx(
+                "group flex items-center justify-center gap-2 w-full px-3 py-3 rounded-full border-2 transition-all duration-300 text-gray-900 hover:text-gray-950 transform hover:scale-110 bg-gray-300 hover:bg-gray-50 border-none",
+                {}
+              )}
+              initial={{ opacity: 0, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                delay: 0.6,
+                duration: 0.9,
+                ease: "easeOut",
+              }}
+            >
+              Mehr erfahren
+            </motion.button>
+          </div>
         </div>
 
         <div className="relative">

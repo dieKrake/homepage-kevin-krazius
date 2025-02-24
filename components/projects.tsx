@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 export default function Projects() {
   return (
-    <section className="scroll-mt-28 mb-28 bg-blue-400" id="services">
+    <section className="scroll-mt-28 mb-28" id="services">
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
