@@ -85,7 +85,7 @@ export default function Intro() {
               }}
             >
               <Image
-                src="/stock-photo-guy.jpg"
+                src="/website_pic.jpg"
                 alt="Kevin portrait foto"
                 width="320"
                 height="320"
