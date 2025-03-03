@@ -5,6 +5,7 @@ import Footer from "@/components/footer";
 // import ThemeSwitch from "@/components/theme-switch";
 // import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
+import ScrollToTop from "@/components/scroll-to-top";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body
         className={`${inter.className} relative pt-[4.5rem] bg-gray-950 text-gray-50 text-opacity-90`}
       >
+        <ScrollToTop />
         {/* <ThemeContextProvider> */}
 
         <Header />

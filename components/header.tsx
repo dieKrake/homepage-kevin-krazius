@@ -12,9 +12,8 @@ import { usePathname } from "next/navigation";
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const pathname = usePathname(); // Holt den aktuellen Pfad
+  const pathname = usePathname();
 
-  // Definiere, auf welchen Seiten die Links nicht sichtbar sein sollen
   const hideLinksOnPaths = ["/impressum", "/agb"];
   const shouldShowLinks = !hideLinksOnPaths.includes(pathname);
 
@@ -35,7 +34,7 @@ export default function Header() {
         >
           {/* Company Logo */}
           <motion.div className="flex items-center custom-sm:ml-4 absolute left-1/2 -translate-x-1/2 custom-sm:left-0 custom-sm:translate-x-0 custom-sm:relative">
-            <Link href="#home" className="cursor-pointer">
+            <Link href="/" className="cursor-pointer">
               <SiTheboringcompany className="text-7xl custom-sm:text-7xl" />
             </Link>
           </motion.div>

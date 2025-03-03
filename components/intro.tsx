@@ -74,7 +74,8 @@ export default function Intro() {
           </div>
         </div>
 
-        <div className="relative">
+        {/* Hier fancy grafik einfügen */}
+        {/* <div className="relative">
           <div className="relative w-[300px] md:[300px] sm:w-[460px]">
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
@@ -89,13 +90,13 @@ export default function Intro() {
                 alt="Kevin portrait foto"
                 width="320"
                 height="320"
-                quality="95"
+                quality="100"
                 priority={true}
                 className="w-full h-auto rounded-2xl object-cover border-[0.35rem] border-white shadow-xl"
               />
             </motion.div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
