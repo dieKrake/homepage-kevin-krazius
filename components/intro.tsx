@@ -86,7 +86,7 @@ export default function Intro() {
             >
               <Image
                 src="/stock-photo-guy.jpg"
-                alt="Christian Schwarz portrait foto"
+                alt="Kevin portrait foto"
                 width="320"
                 height="320"
                 quality="95"
