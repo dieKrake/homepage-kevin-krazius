@@ -1,14 +1,26 @@
-import Link from "next/link";
+"use client";
+
+import { motion } from "framer-motion";
 
 export default function Impressum() {
   return (
     <main className="flex flex-col items-center justify-center px-4 sm:px-0 mt-20 mb-20 max-w-4xl mx-auto">
-      <Link href="/" className="underline mb-8 text-2xl text-center">
-        Zur Startseite
-      </Link>
-      <h1 className="text-4xl font-bold mb-8 text-center">Impressum</h1>
+      <motion.h1
+        className="text-3xl sm:text-4xl font-bold mb-8 text-center"
+        initial={{ opacity: 0, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 }}
+      >
+        Impressum
+      </motion.h1>
 
-      <section className="text-lg leading-8 space-y-6 text-justify">
+      <motion.section
+        className="text-lg leading-8 space-y-6 text-justify"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.175 }}
+        id="impressum"
+      >
         <p>
           <strong>Angaben gemäß § 5 TMG:</strong>
           <br /> Firma: [Dein Firmenname]
@@ -63,7 +75,7 @@ export default function Impressum() {
           übernehmen. Für die Inhalte der verlinkten Seiten ist stets der
           jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
         </p>
-      </section>
+      </motion.section>
     </main>
   );
 }

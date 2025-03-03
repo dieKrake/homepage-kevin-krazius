@@ -1,16 +1,25 @@
-import Link from "next/link";
+"use client";
+
+import { motion } from "framer-motion";
 
 export default function AGB() {
   return (
-    <main className="flex flex-col items-center justify-center px-4 sm:px-0 mt-20 mb-20 max-w-4xl mx-auto">
-      <Link href="/" className="underline mb-8 text-2xl text-center">
-        Zur Startseite
-      </Link>
-      <h1 className="text-4xl font-bold mb-8 text-center">
+    <main className="flex flex-col items-center justify-center px-4 sm:px-2 mt-20 mb-20 max-w-4xl mx-auto">
+      <motion.h1
+        className="text-3xl sm:text-4xl	 font-bold mb-8 text-center"
+        initial={{ opacity: 0, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.175 }}
+      >
         Allgemeine Geschäftsbedingungen (AGB)
-      </h1>
+      </motion.h1>
 
-      <section className="text-lg leading-8 space-y-6 text-justify">
+      <motion.section
+        className="text-lg leading-8 space-y-6 text-justify"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.175 }}
+      >
         <p>
           <strong>1. Geltungsbereich:</strong> Diese Allgemeinen
           Geschäftsbedingungen (AGB) gelten für alle Bestellungen, die über
@@ -71,7 +80,7 @@ export default function AGB() {
           Streitigkeiten aus oder im Zusammenhang mit diesem Vertrag ist unser
           Geschäftssitz.
         </p>
-      </section>
+      </motion.section>
     </main>
   );
 }
