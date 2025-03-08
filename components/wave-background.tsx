@@ -91,7 +91,7 @@ export default function WaveBackground() {
         const basePointSize =
           side === -1
             ? 3.5 - lineIdx * 0.3 // Untere Linien: großer Durchmesser, sanft abnehmend
-            : 3 - lineIdx * 0.3; // Obere Linien: kleiner Durchmesser, sanft abnehmend
+            : 2.5 - lineIdx * 0.3; // Obere Linien: kleiner Durchmesser, sanft abnehmend
 
         for (let i = 0; i < mainPath.length; i++) {
           const point = mainPath[i];
