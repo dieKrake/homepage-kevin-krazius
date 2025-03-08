@@ -1,17 +1,37 @@
 "use client";
 
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import clsx from "clsx";
+import WaveBackground from "./wave-background";
 
 export default function Intro() {
   return (
     <section
       id="home"
-      className="mt-[-4rem] custom-sm:mt-12 mb-28 max-w-[120rem] text-center md:text-left sm:mb-0 scroll-mt-[100rem] px-4 md:px-8"
+      className="relative mt-[-4rem] custom-sm:mt-12 max-w-[120rem] text-center md:text-left sm:mb-0 scroll-mt-[100rem] px-4 md:px-8 overflow-hidden w-screen h-[32rem]"
     >
-      <div className="relative flex flex-col md:flex-row items-center justify-between gap-8 md:gap-40">
+      <style jsx>{`
+        .wave-container {
+          transform: translateX(70%) translateY(20%) scale(2.4);
+        }
+
+        /* Media Query für kleine Bildschirme */
+        @media (max-width: 767px) {
+          .wave-container {
+            transform: translateX(0%) translateY(20%) scale(1);
+          }
+        }
+      `}</style>
+
+      {/* Hintergrund-Welle */}
+      <div className="absolute inset-0 z-0 overflow-hidden opacity-80 wave-container">
+        <WaveBackground />
+      </div>
+
+      {/* Hauptinhalt */}
+      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-40">
         <div className="mt-24 flex-1 max-w-2xl">
           <motion.p
             className="mb-2 text-lg sm:text-xl text-gray-50 !leading-[1.6]"
@@ -73,30 +93,6 @@ export default function Intro() {
             </motion.button>
           </div>
         </div>
-
-        {/* Hier fancy grafik einfügen */}
-        {/* <div className="relative">
-          <div className="relative w-[300px] md:[300px] sm:w-[460px]">
-            <motion.div
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                type: "tween",
-                duration: 0.2,
-              }}
-            >
-              <Image
-                src="/website_pic.jpg"
-                alt="Kevin portrait foto"
-                width="320"
-                height="320"
-                quality="100"
-                priority={true}
-                className="w-full h-auto rounded-2xl object-cover border-[0.35rem] border-white shadow-xl"
-              />
-            </motion.div>
-          </div>
-        </div> */}
       </div>
     </section>
   );

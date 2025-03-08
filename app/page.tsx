@@ -12,7 +12,7 @@ export default function Home() {
       {/* <IntroPicture /> */}
       <div className="flex flex-col items-center px-4 sm:px-0">
         <Intro />
-        <SectionDivider />
+        {/* <SectionDivider /> */}
         <About />
         <Projects />
         {/* <Skills /> */}
