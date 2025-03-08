@@ -10,7 +10,7 @@ export default function Intro() {
   return (
     <section
       id="home"
-      className="relative mt-[-4rem] custom-sm:mt-12 max-w-[120rem] text-center md:text-left sm:mb-0 scroll-mt-[100rem] px-4 md:px-8 overflow-hidden w-screen h-[32rem]"
+      className="relative mt-[-4rem] custom-sm:mt-12 max-w-[120rem] text-center md:text-left sm:mb-0 scroll-mt-[100rem] px-4 md:px-8 overflow-hidden h-[32rem] md:w-screen"
     >
       <style jsx>{`
         .wave-container {
@@ -18,7 +18,7 @@ export default function Intro() {
         }
 
         /* Media Query für kleine Bildschirme */
-        @media (max-width: 767px) {
+        @media (max-width: 1019px) {
           .wave-container {
             transform: translateX(0%) translateY(20%) scale(1);
           }

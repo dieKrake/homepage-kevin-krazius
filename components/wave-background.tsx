@@ -76,7 +76,7 @@ export default function WaveBackground() {
       mainPath.length > 0
         ? mainPath[mainPath.length - 1].x
         : totalSegments * 1200;
-    const fadeWidth = 300; // Breite des Verblassens an den Rändern
+    const fadeWidth = 500; // Breite des Verblassens an den Rändern
 
     // Erstelle Linien oberhalb und unterhalb mit gleichmäßigen Abständen
     for (let side = -1; side <= 1; side += 2) {
@@ -90,8 +90,8 @@ export default function WaveBackground() {
         // Speichere die Basisgröße pro Linie
         const basePointSize =
           side === -1
-            ? 3.5 - lineIdx * 0.2 // Untere Linien: großer Durchmesser, sanft abnehmend
-            : 2.2 - lineIdx * 0.2; // Obere Linien: kleiner Durchmesser, sanft abnehmend
+            ? 3.5 - lineIdx * 0.3 // Untere Linien: großer Durchmesser, sanft abnehmend
+            : 3 - lineIdx * 0.3; // Obere Linien: kleiner Durchmesser, sanft abnehmend
 
         for (let i = 0; i < mainPath.length; i++) {
           const point = mainPath[i];

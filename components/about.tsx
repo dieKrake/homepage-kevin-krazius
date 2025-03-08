@@ -44,7 +44,7 @@ export default function About() {
             also learning how to play the guitar.
           </p>
         </div>
-        <div className="relative mx-auto md:mx-0 w-[350px] h-[350px] md:ml-24 opacity-90">
+        <div className="relative mx-auto md:mx-0 md:w-[350px] md:h-[350px] w-[255px] h-[255px] md:ml-24 opacity-90">
           <img
             src="/website_pic.jpg"
             alt="Kevin Krazius"
