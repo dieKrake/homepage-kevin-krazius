@@ -14,7 +14,7 @@ export default function About() {
       id="about"
     >
       <SectionHeading>Über mich</SectionHeading>
-      <div className="flex flex-col md:flex-row gap-16 items-center">
+      <div className="flex flex-col-reverse md:flex-row gap-16 items-center">
         <div className="text-center md:text-left flex-1 md:max-w-[65%]">
           <p className="mb-3">
             After graduating with a degree in{" "}
@@ -44,11 +44,12 @@ export default function About() {
             also learning how to play the guitar.
           </p>
         </div>
-        <div className="relative mx-auto md:mx-0 w-[290px] h-[390px] md:ml-24">
+        <div className="relative mx-auto md:mx-0 w-[350px] h-[350px] md:ml-24">
           <img
             src="/website_pic.jpg"
             alt="Kevin Krazius"
-            className="rounded-2xl object-cover object-center h-full w-full shadow-xl"
+            className="rounded-full object-cover h-full w-full shadow-xl"
+            style={{ objectPosition: "center 10%" }}
           />
         </div>
       </div>
