@@ -32,7 +32,7 @@ export default function Intro() {
 
       {/* Hauptinhalt */}
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-40">
-        <div className="mt-24 flex-1 max-w-2xl">
+        <div className="mt-24 flex-1 max-w-2xl md:ml-40 sm:ml-0">
           <motion.p
             className="mb-2 text-lg sm:text-xl text-gray-50 !leading-[1.6]"
             initial={{ opacity: 0, y: 100 }}
