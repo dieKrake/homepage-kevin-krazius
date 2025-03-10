@@ -4,35 +4,50 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import clsx from "clsx";
-import WaveBackground from "./wave-background";
+import SimpleWave from "./simple-wave";
 
-export default function Intro() {
+export default function IntroSimple() {
   return (
     <section
       id="home"
-      className="relative mt-[-4rem] custom-sm:mt-12 max-w-[120rem] text-center md:text-left sm:mb-0 scroll-mt-[100rem] px-4 md:px-8 overflow-hidden w-screen h-[32rem]"
+      className="relative mt-[-4rem] custom-sm:mt-12 max-w-[120rem] text-center md:text-left sm:mb-0 scroll-mt-[100rem] px-4 md:px-8 overflow-hidden sm:w-screen h-[32rem]"
     >
       <style jsx>{`
         .wave-container {
-          transform: translateX(70%) translateY(20%) scale(2.4);
+          position: absolute;
+          inset: 0;
+          z-index: 0;
+          opacity: 0.7;
+          /* Die einfache Welle braucht weniger Transformation */
+          transform: translateX(0%) translateY(0%) scale(1.5);
         }
 
         /* Media Query für kleine Bildschirme */
-        @media (max-width: 1019px) {
+        @media (max-width: 1239px) {
           .wave-container {
-            transform: translateX(0%) translateY(20%) scale(1);
+            transform: translateX(0%) translateY(0%) scale(0);
           }
         }
       `}</style>
 
       {/* Hintergrund-Welle */}
-      <div className="absolute inset-0 z-0 overflow-hidden opacity-80 wave-container">
-        <WaveBackground />
-      </div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          delay: 0.2,
+          duration: 1.5,
+          ease: "easeInOut",
+        }}
+      >
+        <div className="wave-container">
+          <SimpleWave />
+        </div>
+      </motion.div>
 
       {/* Hauptinhalt */}
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-40">
-        <div className="mt-24 flex-1 max-w-2xl">
+        <div className="mt-24 flex-1 max-w-2xl ml-0 md:ml-44">
           <motion.p
             className="mb-2 text-lg sm:text-xl text-gray-50 !leading-[1.6]"
             initial={{ opacity: 0, y: 100 }}
