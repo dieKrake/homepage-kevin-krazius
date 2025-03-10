@@ -11,7 +11,7 @@ export default function Contact() {
   return (
     <motion.section
       id="contact"
-      className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
+      className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center md:text-left"
       initial={{
         opacity: 0,
       }}
@@ -26,7 +26,7 @@ export default function Contact() {
       }}
     >
       <SectionHeading>Kontakt</SectionHeading>
-      <div className="flex justify-center sm:gap-32 gap-x-10 text-white/80">
+      <div className="flex md:justify-start justify-center sm:gap-32 gap-x-10 text-white/80">
         <div className="text-left">
           <p className="mb-1">Telefon:</p>
           <p className="mb-1">Öffnungszeiten:</p>
