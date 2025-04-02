@@ -30,21 +30,6 @@ export default function IntroSimple() {
         }
       `}</style>
 
-      {/* Hintergrund-Welle */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{
-          delay: 0.2,
-          duration: 1.5,
-          ease: "easeInOut",
-        }}
-      >
-        <div className="wave-container">
-          <SimpleWave />
-        </div>
-      </motion.div>
-
       {/* Hauptinhalt */}
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-40">
         <div className="mt-24 flex-1 max-w-2xl ml-0 md:ml-44">

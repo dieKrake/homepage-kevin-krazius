@@ -5,6 +5,7 @@ import Projects from "@/components/projects";
 import SectionDivider from "@/components/section-divider";
 import Skills from "@/components/skills";
 import IntroSimple from "@/components/intro-simple";
+import { BackgroundBeamsWithCollision } from "@/components/background-beams-with-collision";
 
 export default function Home() {
   return (
@@ -12,7 +13,9 @@ export default function Home() {
       {/* <IntroPicture /> */}
       <div className="flex flex-col items-center px-4 sm:px-0">
         {/* <Intro /> */}
-        <IntroSimple />
+        <BackgroundBeamsWithCollision>
+          <IntroSimple />
+        </BackgroundBeamsWithCollision>
         {/* <SectionDivider /> */}
         <About />
         <Projects />
