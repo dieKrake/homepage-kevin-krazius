@@ -18,7 +18,6 @@ export default function Home() {
 
       <HeroHighlightDemo />
       <div className="flex flex-col items-center px-4 sm:px-0">
-        <IntroSimple />
         <About />
         <Projects />
         <Contact />
