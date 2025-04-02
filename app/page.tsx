@@ -5,16 +5,18 @@ import Projects from "@/components/projects";
 import SectionDivider from "@/components/section-divider";
 import Skills from "@/components/skills";
 import IntroSimple from "@/components/intro-simple";
-import { BackgroundBeamsWithCollision } from "@/components/background-beams-with-collision";
-import { BackgroundBeams } from "@/components/background-beams";
+import { AuroraBackground } from "@/components/aurora-background";
+import { HeroHighlight } from "@/components/hero-highlight";
+import { HeroHighlightDemo } from "@/components/hero-highlight-demo";
 
 export default function Home() {
   return (
     <main className="flex flex-col items-center">
-      {/* <BackgroundBeams className="hidden md:block fixed inset-0 h-screen -z-10" />*/}
-      <BackgroundBeamsWithCollision className="min-h-screen fixed inset-0 -z-10">
+      {/* <AuroraBackground className="min-h-screen fixed inset-0 -z-10">
         <></>
-      </BackgroundBeamsWithCollision>
+      </AuroraBackground> */}
+
+      <HeroHighlightDemo />
       <div className="flex flex-col items-center px-4 sm:px-0">
         <IntroSimple />
         <About />
