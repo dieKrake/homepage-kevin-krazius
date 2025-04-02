@@ -14,7 +14,9 @@ export default function Projects() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.175 }}
       >
-        <SectionHeading>Leistungen</SectionHeading>
+        <SectionHeading>
+          Individuelle Websites für Unternehmen & Selbstständige
+        </SectionHeading>
       </motion.div>
 
       <motion.section

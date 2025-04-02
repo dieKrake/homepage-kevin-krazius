@@ -17,10 +17,10 @@ export default function About() {
       <div className="flex flex-col-reverse md:flex-row gap-16 items-center">
         <div className="text-center md:text-left flex-1 md:max-w-[65%]">
           <p>
-            Mein Name ist Kevin Krazius und Informatiker aus Leidenschaft mit
-            besonderem Fokus auf moderner Webentwicklung. Mein Studium gab mir
-            das technische Fundament – meine kontinuierliche Weiterbildung hält
-            mich an der Spitze aktueller Entwicklungen.
+            Mein Name ist Kevin Krazius und ich bin Informatiker aus
+            Leidenschaft mit besonderem Fokus auf moderner Webentwicklung. Mein
+            Studium gab mir das technische Fundament – meine kontinuierliche
+            Weiterbildung hält mich an der Spitze aktueller Entwicklungen.
           </p>
 
           <p>
