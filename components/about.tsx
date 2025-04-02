@@ -14,8 +14,9 @@ export default function About() {
       id="about"
     >
       <SectionHeading>Über mich</SectionHeading>
+
       <div className="flex flex-col-reverse md:flex-row gap-16 items-center">
-        <div className="text-center md:text-left flex-1 md:max-w-[65%]">
+        <div className="text-left flex-1 md:max-w-[65%]">
           <p>
             Mein Name ist Kevin Krazius und ich bin Informatiker aus
             Leidenschaft mit besonderem Fokus auf moderner Webentwicklung. Mein
