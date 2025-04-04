@@ -118,7 +118,7 @@ export default function Header() {
             <a
               className="px-[0.5rem] py-[0.5rem] flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer text-white"
               href={"https://wa.me/17682254673"}
-              style={{ backgroundColor: "rgb(0, 0, 0)" }}
+              style={{ backgroundColor: "rgb(3, 7, 18)" }}
             >
               <h1 className="hidden min-[1240px]:block">+49 176 82254673</h1>
               <BsWhatsapp className="text-3xl custom-sm:text-4xl" />
