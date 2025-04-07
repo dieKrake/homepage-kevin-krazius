@@ -12,21 +12,14 @@ import globusImg from "@/public/globus-picture.jpg";
 
 export const links = [
   {
-    name: "Über mich",
-    hash: "#about",
-  },
-  {
     name: "Leistungen",
     hash: "#services",
   },
-  // {
-  //   name: "Skills",
-  //   hash: "#skills",
-  // },
-  /*{
-    name: "Experience",
-    hash: "#experience",
-  }, */
+  {
+    name: "Über mich",
+    hash: "#about",
+  },
+
   {
     name: "Kontakt",
     hash: "#contact",

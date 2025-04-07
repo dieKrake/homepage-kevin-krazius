@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 export default function About() {
   return (
     <motion.section
-      className="sm:px-4 mb-28 md:max-w-[65rem] sm:max-w-[60rem] text-center leading-8 sm:mt-16 scroll-mt-28"
+      className="sm:px-4 mb-28 md:max-w-[65rem] sm:max-w-[60rem] text-center leading-8 sm:mt-0 scroll-mt-28"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}

@@ -58,7 +58,7 @@ export default function Projects() {
         </p>
       </motion.section>
 
-      <div className="flex flex-wrap gap-8 justify-center xl:mx-4">
+      <div className="flex flex-wrap gap-x-2 gap-y-8 justify-center xl:mx-2">
         {projectsData.map((project, index) => (
           <React.Fragment key={index}>
             <Project {...project} />

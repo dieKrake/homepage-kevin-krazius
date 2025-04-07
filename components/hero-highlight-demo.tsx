@@ -11,15 +11,6 @@ export function HeroHighlightDemo() {
       className="w-full"
     >
       <HeroHighlight>
-        {/* <motion.p
-          className="mb-2 text-lg sm:text-xl text-gray-50 !leading-[1.6] text-center"
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-        >
-          Ihre Website in professionellen Händen
-        </motion.p> */}
-
         <motion.h1
           initial={{
             opacity: 0,
@@ -59,6 +50,12 @@ export function HeroHighlightDemo() {
             style={{
               opacity: 0,
               animation: "fadeIn 0.9s ease-out 0.6s forwards",
+            }}
+            onClick={() => {
+              const servicesSection = document.getElementById("services");
+              if (servicesSection) {
+                servicesSection.scrollIntoView({ behavior: "smooth" });
+              }
             }}
           >
             Mehr erfahren
