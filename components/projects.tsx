@@ -8,11 +8,15 @@ import { motion } from "framer-motion";
 
 export default function Projects() {
   return (
-    <section className="scroll-mt-28 mb-28" id="services">
+    <section
+      className="scroll-mt-28 mb-28 flex flex-col items-center justify-between min-h-[40rem]"
+      id="services"
+    >
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.175 }}
+        className="w-full flex justify-center text-center mt-4"
       >
         <SectionHeading>
           Individuelle Websites für Unternehmen & Selbstständige
@@ -20,7 +24,7 @@ export default function Projects() {
       </motion.div>
 
       <motion.section
-        className="mb-28 max-w-[45rem] text-center md:text-left leading-8 sm:mb-12 scroll-mt-28"
+        className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-12 scroll-mt-28 w-full my-auto"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.175 }}
@@ -54,7 +58,7 @@ export default function Projects() {
         </p>
       </motion.section>
 
-      <div>
+      <div className="flex flex-wrap gap-8 justify-center xl:mx-4">
         {projectsData.map((project, index) => (
           <React.Fragment key={index}>
             <Project {...project} />

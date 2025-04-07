@@ -26,7 +26,7 @@ export default function Contact() {
       }}
     >
       <SectionHeading>Kontakt</SectionHeading>
-      <div className="flex md:justify-start justify-center sm:gap-32 gap-x-10 text-white/80">
+      <div className="flex justify-center sm:gap-32 gap-x-10 text-white/80">
         <div className="text-left">
           <p className="mb-1">Telefon:</p>
           <p className="mb-1">Öffnungszeiten:</p>
@@ -50,7 +50,7 @@ export default function Contact() {
         </div>
       </div>
 
-      <p className=" text-white/80 mt-12">
+      <p className="text-white/80 mt-12 text-center">
         Bitte kontaktieren Sie mich direkt per Whatsapp, Telefon, E-Mail oder
         über folgendes Formular.
       </p>
@@ -83,7 +83,9 @@ export default function Contact() {
           required
           maxLength={5000}
         />
-        <SubmitBtn />
+        <div className="flex justify-center">
+          <SubmitBtn />
+        </div>
       </form>
     </motion.section>
   );

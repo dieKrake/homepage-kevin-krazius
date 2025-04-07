@@ -13,10 +13,9 @@ export default function About() {
       transition={{ delay: 0.175 }}
       id="about"
     >
-      <SectionHeading>Über mich</SectionHeading>
-
       <div className="flex flex-col-reverse md:flex-row gap-16 items-center">
-        <div className="text-left flex-1 md:max-w-[65%]">
+        <div className="text-center flex-1 md:max-w-[65%]">
+          <SectionHeading>Über mich</SectionHeading>
           <p>
             Mein Name ist Kevin Krazius und ich bin Informatiker aus
             Leidenschaft mit besonderem Fokus auf moderner Webentwicklung. Mein
