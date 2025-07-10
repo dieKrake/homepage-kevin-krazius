@@ -16,7 +16,7 @@ export default function Projects() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.175 }}
-        className="w-full flex justify-center text-center mt-4"
+        className="w-full flex justify-center mt-4"
       >
         <SectionHeading>
           Individuelle Websites für Unternehmen & Selbstständige
@@ -30,31 +30,25 @@ export default function Projects() {
         transition={{ delay: 0.175 }}
       >
         <p className="mb-3">
-          After graduating with a degree in{" "}
-          <span className="font-medium">Accounting</span>, I decided to pursue
-          my passion for programming. I enrolled in a coding bootcamp and
-          learned{" "}
-          <span className="font-medium">full-stack web development</span>.{" "}
-          <span className="italic">My favorite part of programming</span> is the
-          problem-solving aspect. I <span className="underline">love</span> the
-          feeling of finally figuring out a solution to a problem. My core stack
-          is{" "}
-          <span className="font-medium">
-            React, Next.js, Node.js, and MongoDB
-          </span>
-          . I am also familiar with TypeScript and Prisma. I am always looking
-          to learn new technologies. I am currently looking for a{" "}
-          <span className="font-medium">full-time position</span> as a software
-          developer.
+          Als Webentwickler spezialisiere ich mich auf die Erstellung von
+          maßgeschneiderten Websites und Landing Pages, die perfekt auf die
+          Bedürfnisse von Unternehmen und Selbstständigen abgestimmt sind. Ich
+          helfe Ihnen, Ihre Online-Präsenz zu stärken und Ihre Ziele durch
+          moderne, leistungsstarke Technologien wie{" "}
+          <span className="font-medium">React</span> und{" "}
+          <span className="font-medium">Next.js</span> zu erreichen. Ob es um
+          eine simple Landing Page oder eine komplexe Web-Anwendung geht – ich
+          biete Ihnen maßgeschneiderte Lösungen, die sowohl ästhetisch
+          ansprechend als auch funktional sind.
         </p>
 
         <p>
-          <span className="italic">When I'm not coding</span>, I enjoy playing
-          video games, watching movies, and playing with my dog. I also enjoy{" "}
-          <span className="font-medium">learning new things</span>. I am
-          currently learning about{" "}
-          <span className="font-medium">history and philosophy</span>. I'm also
-          learning how to play the guitar.
+          <span className="italic">Wenn ich nicht gerade Websites baue</span>,
+          beschäftige ich mich gerne mit neuen Technologien und verbessere
+          kontinuierlich meine Fähigkeiten. Ich arbeite stets daran, meine
+          Kunden durch qualitativ hochwertige Lösungen und eine effiziente
+          Arbeitsweise zu unterstützen. Lassen Sie uns gemeinsam Ihre
+          Online-Präsenz auf das nächste Level heben!
         </p>
       </motion.section>
 
