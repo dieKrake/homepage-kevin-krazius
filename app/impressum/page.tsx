@@ -23,28 +23,28 @@ export default function Impressum() {
       >
         <p>
           <strong>Angaben gemäß § 5 TMG:</strong>
-          <br /> Firma: [Dein Firmenname]
-          <br /> Adresse: [Straße, Hausnummer, Postleitzahl, Ort]
-          <br /> Geschäftsführer: [Name des Geschäftsführers]
+          <br /> Firma: Krazius Solutions
+          <br /> Adresse: Hauptstraße 60, 73489 Jagstzell
+          <br /> Geschäftsführer: Kevin Krazius
         </p>
 
         <p>
           <strong>Kontakt:</strong>
-          <br /> Telefon: [Telefonnummer]
-          <br /> E-Mail: [E-Mail-Adresse]
+          <br /> Telefon: +49 162 405 9165
+          <br /> E-Mail: kevin@krazius-solutions.com
         </p>
 
         <p>
           <strong>
             Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz:
           </strong>
-          <br /> [USt-IdNr.]
+          <br /> DE453628349
         </p>
 
         <p>
           <strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong>
-          <br /> [Name des Verantwortlichen]
-          <br /> Adresse: [Adresse des Verantwortlichen]
+          <br /> Kevin Krazius
+          <br /> Adresse: Hauptstraße 60, 73489 Jagstzell
         </p>
 
         <p>

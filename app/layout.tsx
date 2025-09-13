@@ -6,6 +6,8 @@ import Footer from "@/components/footer";
 // import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 import ScrollToTop from "@/components/scroll-to-top";
+import CookieProvider from "@/context/cookie-context";
+import CookieBanner from "@/components/cookie-banner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,16 +26,19 @@ export default function RootLayout({
       <body
         className={`${inter.className} relative pt-[4.5rem] bg-gray-950 text-gray-50 text-opacity-90`}
       >
-        <ScrollToTop />
-        {/* <ThemeContextProvider> */}
+        <CookieProvider>
+          <ScrollToTop />
+          {/* <ThemeContextProvider> */}
 
-        <Header />
-        {children}
-        <Footer />
+          <Header />
+          {children}
+          <Footer />
 
-        <Toaster position="top-right" />
-        {/* <ThemeSwitch /> */}
-        {/* </ThemeContextProvider> */}
+          <Toaster position="top-right" />
+          <CookieBanner />
+          {/* <ThemeSwitch /> */}
+          {/* </ThemeContextProvider> */}
+        </CookieProvider>
       </body>
     </html>
   );
