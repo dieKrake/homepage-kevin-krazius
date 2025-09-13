@@ -30,6 +30,11 @@ steps:
       - "1"
       - "--max-instances"
       - "10"
+      - "--service-account"
+      - "krazius-cloudbuild@$PROJECT_ID.iam.gserviceaccount.com"
+
+# Use dedicated service account for builds
+serviceAccount: "projects/$PROJECT_ID/serviceAccounts/krazius-cloudbuild@$PROJECT_ID.iam.gserviceaccount.com"
 
 images:
   - "gcr.io/$PROJECT_ID/krazius-solutions:$COMMIT_SHA"
