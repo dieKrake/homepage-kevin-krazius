@@ -14,6 +14,11 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Krazius Solutions | Kevin Krazius",
   description: "Krazius Solutions ist...",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

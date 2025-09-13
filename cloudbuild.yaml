@@ -33,6 +33,18 @@ steps:
       - "--service-account"
       - "krazius-cloudbuild@$PROJECT_ID.iam.gserviceaccount.com"
 
+  # Add public access IAM policy
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    entrypoint: gcloud
+    args:
+      - "run"
+      - "services"
+      - "add-iam-policy-binding"
+      - "krazius-solutions"
+      - "--region=europe-west1"
+      - "--member=allAuthenticatedUsers"
+      - "--role=roles/run.invoker"
+
 # Use dedicated service account for builds with cloud logging
 serviceAccount: "projects/$PROJECT_ID/serviceAccounts/krazius-cloudbuild@$PROJECT_ID.iam.gserviceaccount.com"
 
