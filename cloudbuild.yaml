@@ -33,8 +33,12 @@ steps:
       - "--service-account"
       - "krazius-cloudbuild@$PROJECT_ID.iam.gserviceaccount.com"
 
-# Use dedicated service account for builds
+# Use dedicated service account for builds with cloud logging
 serviceAccount: "projects/$PROJECT_ID/serviceAccounts/krazius-cloudbuild@$PROJECT_ID.iam.gserviceaccount.com"
+
+# Configure logging to use cloud logging only
+options:
+  logging: CLOUD_LOGGING_ONLY
 
 images:
   - "gcr.io/$PROJECT_ID/krazius-solutions:$COMMIT_SHA"
