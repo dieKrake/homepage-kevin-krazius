@@ -26,11 +26,9 @@ export function HeroHighlightDemo() {
           }}
           className="text-4xl px-4 md:text-5xl lg:text-6xl font-bold text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto mt-0 sm:mt-10"
         >
-          Moderne Webentwicklung
+          Moderne Webentwicklung für
           <br />
-          <Highlight className="text-white">
-            für Ihren digitalen Erfolg
-          </Highlight>
+          <Highlight className="text-white">Ihren digitalen Erfolg</Highlight>
         </motion.h1>
 
         <motion.p
