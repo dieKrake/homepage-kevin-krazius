@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { BsBorderWidth, BsWhatsapp } from "react-icons/bs";
-import { SiTheboringcompany } from "react-icons/si";
+import Image from "next/image";
 import { links } from "@/lib/data";
 import Link from "next/link";
 import clsx from "clsx";
@@ -35,7 +35,13 @@ export default function Header() {
           {/* Company Logo */}
           <motion.div className="flex items-center custom-sm:ml-4 absolute left-1/2 -translate-x-1/2 custom-sm:left-0 custom-sm:translate-x-0 custom-sm:relative">
             <Link href="/" className="cursor-pointer">
-              <SiTheboringcompany className="text-7xl custom-sm:text-7xl" />
+              <Image
+                src="/Krazius-Solutions-Logo.webp"
+                alt="Logo"
+                width={100}
+                height={100}
+                className="h-16 w-auto"
+              />
             </Link>
           </motion.div>
 
