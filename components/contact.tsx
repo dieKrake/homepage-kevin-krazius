@@ -35,18 +35,18 @@ export default function Contact() {
         </div>
         <div className="text-left">
           <p className="mb-1">
-            <a href="tel:+4917682254673" className="underline">
-              +49 176 82254673
+            <a href="tel:+491624059165" className="underline">
+              +49 162 405 9165
             </a>
           </p>
           <p className="mb-1">09 - 17Uhr</p>
           <p className="mb-1">
-            <a href="mailto:example@gmail.com" className="underline">
-              example@web.de
+            <a href="mailto:kevin@krazius-solutions.de" className="underline">
+              kevin@krazius-solutions.de
             </a>
           </p>
-          <p className="mb-1">Spitalstraße 18</p>
-          <p className="mb-1">73479 Ellwangen</p>
+          <p className="mb-1">Hauptstraße 60</p>
+          <p className="mb-1">73489 Jagstzell</p>
         </div>
       </div>
 

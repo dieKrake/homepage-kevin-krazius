@@ -14,8 +14,8 @@ export default function About() {
       id="about"
     >
       <div className="flex flex-col-reverse md:flex-row gap-16 items-center">
-        <div className="text-center flex-1 md:max-w-[65%]">
-          <SectionHeading>Über mich</SectionHeading>
+        <div className="text-left flex-1 md:max-w-[65%]">
+          <h2 className="text-3xl font-medium mb-8 text-left">Über mich</h2>
           <p>
             Mein Name ist Kevin Krazius und ich bin Informatiker aus
             Leidenschaft mit besonderem Fokus auf moderner Webentwicklung. Mein
@@ -26,7 +26,7 @@ export default function About() {
           <p>
             Mein Tech-Stack:{" "}
             <span className="font-medium">
-              React, Next.js, Node.js und MongoDB
+              Next.js, Tailwind, Shadcn UI und Supabase
             </span>
             . Ich bleibe stets auf dem neuesten Stand, um Ihren digitalen
             Auftritt zukunftssicher zu gestalten.
@@ -50,7 +50,7 @@ export default function About() {
           <img
             src="/website_pic.jpg"
             alt="Kevin Krazius"
-            className="rounded-full object-cover h-full w-full shadow-xl border-4 border-gray-500 border-opacity-50"
+            className="rounded-full object-cover h-full w-full shadow-xl border-4 border-gray-500 border-opacity-50 opacity-80"
             style={{ objectPosition: "center 5%" }}
           />
         </div>

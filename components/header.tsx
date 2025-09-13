@@ -120,7 +120,7 @@ export default function Header() {
               href={"https://wa.me/17682254673"}
               style={{ backgroundColor: "rgb(3, 7, 18)" }}
             >
-              <h1 className="hidden min-[1240px]:block">+49 111 23456789</h1>
+              <h1 className="hidden min-[1240px]:block">+49 162 405 9165</h1>
               <BsWhatsapp className="text-3xl custom-sm:text-4xl" />
             </a>
           </motion.div>

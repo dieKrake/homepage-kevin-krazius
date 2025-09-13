@@ -2,13 +2,10 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
-import clockImg from "@/public/clock.jpg";
-import phoneImg from "@/public/phone.jpg";
-import coinsImg from "@/public/coins-picture.jpg";
-import globusImg from "@/public/globus-picture.jpg";
+import digitalImage from "@/public/digital.webp";
+import uiImage from "@/public/ui.webp";
+import devicesImage from "@/public/devices.webp";
+import modernImage from "@/public/modern.webp";
 
 export const links = [
   {
@@ -57,30 +54,30 @@ export const projectsData = [
   {
     title: "Digital werden",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: phoneImg,
+      "Digitale Transformation durch moderne Webanwendungen. Mit Next.js und Supabase entwickle ich skalierbare Lösungen für Ihre Geschäftsprozesse.",
+    tags: ["Next.js", "Supabase", "Digitalisierung"],
+    imageUrl: digitalImage,
   },
   {
     title: "Für jeden Endnutzer",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: globusImg,
+      "Responsive Anwendungen für alle Geräte. TypeScript und Tailwind sorgen für optimale Benutzererfahrung auf Desktop, Tablet und Smartphone.",
+    tags: ["TypeScript", "Tailwind", "Responsive Design", "Cross-Platform"],
+    imageUrl: devicesImage,
   },
   {
     title: "Modernes Auftreten",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: coinsImg,
+      "Professionelle Webauftritte mit modernen Animationen. Framer Motion und zeitgemäßes Design stärken Ihre Marke und steigern Conversions.",
+    tags: ["Framer Motion", "Branding", "Animation"],
+    imageUrl: modernImage,
   },
   {
     title: "Einfache Bedienung",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: coinsImg,
+      "Intuitive Benutzeroberflächen reduzieren Schulungsaufwand. Durchdachtes UX-Design erhöht die Nutzerakzeptanz Ihrer digitalen Lösungen.",
+    tags: ["UX Design", "Usability", "Interface Design"],
+    imageUrl: uiImage,
   },
 ] as const;
 
