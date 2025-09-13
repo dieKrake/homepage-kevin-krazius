@@ -42,7 +42,7 @@ steps:
       - "add-iam-policy-binding"
       - "krazius-solutions"
       - "--region=europe-west1"
-      - "--member=allAuthenticatedUsers"
+      - "--member=allUsers"
       - "--role=roles/run.invoker"
 
 # Use dedicated service account for builds with cloud logging
