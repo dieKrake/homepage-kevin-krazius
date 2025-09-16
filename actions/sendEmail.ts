@@ -9,6 +9,8 @@ import ContactFormEmail from "@/email/contact-form-email";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+console.log("api key", process.env.RESEND_API_KEY);
+
 export const sendEmail = async (formData: FormData) => {
   const senderEmail = formData.get("senderEmail");
   const message = formData.get("message");
@@ -28,7 +30,7 @@ export const sendEmail = async (formData: FormData) => {
   let data;
   try {
     data = await resend.emails.send({
-      from: "Contact Form <noreply@krazius-solutions.com>",
+      from: "Contact Form <noreply@notifications.krazius-solutions.com>",
       to: "kevin@krazius-solutions.com",
       subject: "Message from Contact Form",
       reply_to: senderEmail as string,

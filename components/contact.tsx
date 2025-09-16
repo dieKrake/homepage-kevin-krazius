@@ -84,8 +84,7 @@ export default function Contact() {
           maxLength={5000}
         />
         <div className="flex justify-center">
-          <p className="text-white/80">-Funktionalität in Arbeit-</p>
-          {/* <SubmitBtn /> */}
+          <SubmitBtn />
         </div>
       </form>
     </motion.section>
