@@ -41,8 +41,8 @@ export default function Contact() {
           </p>
           <p className="mb-1">09 - 17Uhr</p>
           <p className="mb-1">
-            <a href="mailto:kevin@krazius-solutions.de" className="underline">
-              kevin@krazius-solutions.de
+            <a href="mailto:kevin@krazius-solutions.com" className="underline">
+              kevin@krazius-solutions.com
             </a>
           </p>
           <p className="mb-1">Hauptstraße 60</p>
