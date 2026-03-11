@@ -52,31 +52,31 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "Digital werden",
+    title: "Intelligente Kundenbetreuung",
     description:
-      "Digitale Transformation durch moderne Webanwendungen. Mit Next.js und Supabase entwickle ich skalierbare Lösungen für Ihre Geschäftsprozesse.",
-    tags: ["Next.js", "Supabase", "Digitalisierung"],
+      "RAG-basierte Chatbots für präzise Antworten auf Kundenfragen. 24/7 Verfügbarkeit mit nahtloser Integration in Ihre bestehende Website.",
+    tags: ["RAG-Technologie", "24/7 Support", "Website Integration"],
     imageUrl: digitalImage,
   },
   {
-    title: "Für jeden Endnutzer",
+    title: "Branchenspezifische Lösungen",
     description:
-      "Responsive Anwendungen für alle Geräte. TypeScript und Tailwind sorgen für optimale Benutzererfahrung auf Desktop, Tablet und Smartphone.",
-    tags: ["TypeScript", "Tailwind", "Responsive Design", "Cross-Platform"],
+      "Anpassung an Ihre Fachterminologie und Schulung mit Unternehmensdaten. Vollständige Compliance und Datenschutz nach deutschen Standards.",
+    tags: ["Fachterminologie", "Unternehmensdaten", "DSGVO-konform"],
     imageUrl: devicesImage,
   },
   {
-    title: "Modernes Auftreten",
+    title: "Nahtlose Integration",
     description:
-      "Professionelle Webauftritte mit modernen Animationen. Framer Motion und zeitgemäßes Design stärken Ihre Marke und steigern Conversions.",
-    tags: ["Framer Motion", "Branding", "Animation"],
+      "Verbindung zu WhatsApp, Website und Social Media Kanälen. CRM-Anbindung möglich mit einfacher, zentraler Verwaltung.",
+    tags: ["WhatsApp", "Social Media", "CRM-Integration"],
     imageUrl: modernImage,
   },
   {
-    title: "Einfache Bedienung",
+    title: "Kontinuierliche Optimierung",
     description:
-      "Intuitive Benutzeroberflächen reduzieren Schulungsaufwand. Durchdachtes UX-Design erhöht die Nutzerakzeptanz Ihrer digitalen Lösungen.",
-    tags: ["UX Design", "Usability", "Interface Design"],
+      "Lernende Systeme mit Performance-Monitoring und regelmäßigen Updates. Ihr Chatbot wird kontinuierlich intelligenter.",
+    tags: ["Machine Learning", "Performance-Monitoring", "Updates"],
     imageUrl: uiImage,
   },
 ] as const;

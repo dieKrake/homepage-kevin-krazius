@@ -19,7 +19,7 @@ export default function Projects() {
         className="w-full flex justify-center mt-4"
       >
         <SectionHeading>
-          Individuelle Websites für Unternehmen & Selbstständige
+          KI-Chatbot Lösungen für Kleinunternehmen
         </SectionHeading>
       </motion.div>
 
@@ -30,25 +30,26 @@ export default function Projects() {
         transition={{ delay: 0.175 }}
       >
         <p className="mb-3">
-          Als Webentwickler spezialisiere ich mich auf die Erstellung von
-          maßgeschneiderten Websites und Landing Pages, die perfekt auf die
-          Bedürfnisse von Unternehmen und Selbstständigen abgestimmt sind. Ich
-          helfe Ihnen, Ihre Online-Präsenz zu stärken und Ihre Ziele durch
-          moderne, leistungsstarke Technologien wie{" "}
-          <span className="font-medium">React</span> und{" "}
-          <span className="font-medium">Next.js</span> zu erreichen. Ob es um
-          eine simple Landing Page oder eine komplexe Web-Anwendung geht – ich
-          biete Ihnen maßgeschneiderte Lösungen, die sowohl ästhetisch
-          ansprechend als auch funktional sind.
+          Als KI-Spezialist entwickle ich intelligente Chatbot-Lösungen mit
+          <span className="font-medium"> RAG-Technologie</span>, die perfekt auf
+          die Bedürfnisse von Kleinunternehmen abgestimmt sind. Ich helfe Ihnen,
+          Ihre Kundenbetreuung zu automatisieren und durch moderne{" "}
+          <span className="font-medium">KI-Technologien</span> und{" "}
+          <span className="font-medium">maschinelles Lernen</span> zu
+          optimieren. Von der einfachen FAQ-Automatisierung bis hin zu
+          komplexen, branchenspezifischen Beratungs-Chatbots – ich biete Ihnen
+          maßgeschneiderte Lösungen für 24/7 Kundenservice.
         </p>
 
         <p>
-          <span className="italic">Wenn ich nicht gerade Websites baue</span>,
-          beschäftige ich mich gerne mit neuen Technologien und verbessere
-          kontinuierlich meine Fähigkeiten. Ich arbeite stets daran, meine
-          Kunden durch qualitativ hochwertige Lösungen und eine effiziente
-          Arbeitsweise zu unterstützen. Lassen Sie uns gemeinsam Ihre
-          Online-Präsenz auf das nächste Level heben!
+          <span className="italic">
+            Wenn ich nicht gerade Chatbots entwickle
+          </span>
+          , beschäftige ich mich mit den neuesten KI-Entwicklungen und
+          verbessere kontinuierlich meine Expertise in maschinellem Lernen. Ich
+          arbeite stets daran, meine Kunden durch intelligente Automatisierung
+          und effiziente KI-Lösungen zu unterstützen. Lassen Sie uns gemeinsam
+          Ihre Kundenbetreuung revolutionieren!
         </p>
       </motion.section>
 
