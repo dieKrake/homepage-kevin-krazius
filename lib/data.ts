@@ -82,23 +82,65 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
+  "OpenAI GPT-4",
+  "Claude AI",
+  "RAG-Technologie",
+  "LangChain",
+  "LlamaIndex",
+  "Pinecone",
+  "Weaviate",
+  "Vector Databases",
+  "Prompt Engineering",
+  "Python",
   "TypeScript",
-  "React",
   "Next.js",
+  "React",
   "Node.js",
+  "MongoDB",
+  "PostgreSQL",
   "Git",
   "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
-  "Python",
-  "Django",
   "Framer Motion",
+] as const;
+
+export const caseStudiesData = [
+  {
+    title: "Handwerksbetrieb Chatbot",
+    description:
+      "Intelligenter Chatbot für einen Elektrikerbetrieb mit 24/7 Terminbuchung, Kostenvoranschlägen und technischer Beratung. Reduzierte Anrufe um 60% und steigerte Online-Anfragen um 40%.",
+    features: [
+      "Terminbuchung",
+      "Kostenvoranschläge",
+      "Technische Beratung",
+      "Notfall-Routing",
+    ],
+    industry: "Handwerk",
+    results: "60% weniger Anrufe, 40% mehr Online-Anfragen",
+  },
+  {
+    title: "FAQ-Automatisierung Steuerberater",
+    description:
+      "RAG-basierter Chatbot für Steuerberatungskanzlei mit Zugriff auf aktuelle Steuergesetze und Mandantenunterlagen. Automatisiert 80% der Standardanfragen und bietet 24/7 Erstberatung.",
+    features: [
+      "Steuerrecht-Datenbank",
+      "Mandantenportal",
+      "Dokumentenupload",
+      "Terminvereinbarung",
+    ],
+    industry: "Steuerberatung",
+    results: "80% automatisierte Anfragen, 24/7 Verfügbarkeit",
+  },
+  {
+    title: "Praxis-Terminbuchung",
+    description:
+      "Intelligentes Terminmanagement für Zahnarztpraxis mit automatischer Terminvorschlägen, Erinnerungen und Behandlungsberatung. Integriert in bestehende Praxissoftware.",
+    features: [
+      "Terminbuchung",
+      "Automatische Erinnerungen",
+      "Behandlungsberatung",
+      "Praxissoftware-Integration",
+    ],
+    industry: "Gesundheitswesen",
+    results: "50% weniger No-Shows, 30% mehr Terminauslastung",
+  },
 ] as const;
