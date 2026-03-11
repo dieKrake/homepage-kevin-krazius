@@ -39,7 +39,7 @@ export default function Intro() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
           >
-            Ihre Website in professionellen Händen
+            Intelligente Kundenbetreuung rund um die Uhr
           </motion.p>
 
           <motion.h1
@@ -47,7 +47,7 @@ export default function Intro() {
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            Moderne Webentwicklung für Ihren digitalen Erfolg
+            KI-Chatbots für Kleinunternehmen
           </motion.h1>
 
           <motion.p
@@ -56,14 +56,15 @@ export default function Intro() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
           >
-            Kostenlosen Termin zur Analyse ihrer Website vereinbaren:
+            24/7 Kundenbetreuung • Automatisierte Anfragen • Personalisierte
+            Beratung
           </motion.p>
 
           <div className="flex gap-4 mt-8">
             <motion.button
               className={clsx(
                 "group flex items-center justify-center gap-2 w-full px-3 py-3 rounded-full border-2 transition-all duration-300 text-gray-900 hover:text-gray-950 transform hover:scale-110 bg-gray-300 hover:bg-gray-50 border-none",
-                {}
+                {},
               )}
               initial={{ opacity: 0, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
@@ -73,13 +74,13 @@ export default function Intro() {
                 ease: "easeOut",
               }}
             >
-              Kostenlose Analyse
+              Chatbot-Demo
             </motion.button>
 
             <motion.button
               className={clsx(
                 "group flex items-center justify-center gap-2 w-full px-3 py-3 rounded-full border-2 transition-all duration-300 text-gray-900 hover:text-gray-950 transform hover:scale-110 bg-gray-300 hover:bg-gray-50 border-none",
-                {}
+                {},
               )}
               initial={{ opacity: 0, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
@@ -89,7 +90,7 @@ export default function Intro() {
                 ease: "easeOut",
               }}
             >
-              Mehr erfahren
+              Beratung buchen
             </motion.button>
           </div>
         </div>

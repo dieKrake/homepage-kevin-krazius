@@ -26,9 +26,9 @@ export function HeroHighlightDemo() {
           }}
           className="text-4xl px-4 md:text-5xl lg:text-6xl font-bold text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto mt-0 sm:mt-10"
         >
-          Moderne Webentwicklung für
+          KI-Chatbots für
           <br />
-          <Highlight className="text-white">Ihren digitalen Erfolg</Highlight>
+          <Highlight className="text-white">Kleinunternehmen</Highlight>
         </motion.h1>
 
         <motion.p
@@ -37,9 +37,10 @@ export function HeroHighlightDemo() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
         >
-          Erreichen Sie mehr Kunden mit einer optimierten und modernen Website.
-          Lassen Sie uns in einem ersten Gespräch gemeinsam herausfinden, wie
-          wir Ihre Unternehmens-Website verbessern können.
+          24/7 Kundenbetreuung • Automatisierte Anfragen • Personalisierte
+          Beratung
+          <br />
+          Intelligente Chatbot-Lösungen für mehr Effizienz in Ihrem Unternehmen.
         </motion.p>
 
         <div className="flex mt-8 justify-center">
@@ -50,13 +51,13 @@ export function HeroHighlightDemo() {
               animation: "fadeIn 0.9s ease-out 0.6s forwards",
             }}
             onClick={() => {
-              const servicesSection = document.getElementById("services");
-              if (servicesSection) {
-                servicesSection.scrollIntoView({ behavior: "smooth" });
+              const contactSection = document.getElementById("contact");
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: "smooth" });
               }
             }}
           >
-            Mehr erfahren
+            Kostenlose Chatbot-Demo sichern
           </button>
         </div>
       </HeroHighlight>

@@ -17,33 +17,43 @@ export default function About() {
         <div className="text-left flex-1 md:max-w-[65%]">
           <h2 className="text-3xl font-medium mb-8 text-left">Über mich</h2>
           <p>
-            Mein Name ist Kevin Krazius und ich bin Informatiker aus
-            Leidenschaft mit besonderem Fokus auf moderner Webentwicklung. Mein
-            Studium gab mir das technische Fundament – meine kontinuierliche
-            Weiterbildung hält mich an der Spitze aktueller Entwicklungen.
-          </p>
-
-          <p>
-            Mein Tech-Stack:{" "}
+            Mein Name ist Kevin Krazius und ich bin KI-Spezialist aus
+            Leidenschaft mit Fokus auf intelligente Chatbot-Lösungen. Meine
             <span className="font-medium">
-              Next.js, Tailwind, Shadcn UI und Supabase
+              {" "}
+              Bachelorarbeit mit KI-Schwerpunkt
+            </span>{" "}
+            und praktische Erfahrung im{" "}
+            <span className="font-medium">LLM- und Prompt-Engineering</span>
+            bilden das Fundament für maßgeschneiderte Automatisierungslösungen.
+          </p>
+
+          <p>
+            Mein KI-Tech-Stack:{" "}
+            <span className="font-medium">
+              RAG-Technologie, OpenAI GPT, LangChain und Vector-Datenbanken
             </span>
-            . Ich bleibe stets auf dem neuesten Stand, um Ihren digitalen
-            Auftritt zukunftssicher zu gestalten.
+            . Ich entwickle Chatbots, die nicht nur antworten, sondern Ihr
+            Unternehmenswissen intelligent nutzen und kontinuierlich dazulernen.
           </p>
 
           <p>
-            <span className="italic">Künstliche Intelligenz</span> sehe ich als
-            entscheidenden Innovationstreiber. Mit AI-Integration erschaffen wir
-            heute Websites, die effizienter, personalisierter und
-            benutzerfreundlicher sind als je zuvor.
+            <span className="italic">RAG-Technologie</span> (Retrieval-Augmented
+            Generation) ermöglicht es Chatbots, auf Ihre spezifischen
+            Unternehmensdaten zuzugreifen und präzise, kontextbezogene Antworten
+            zu geben. So wird Ihr Chatbot zum intelligenten Berater, der Ihre
+            Kunden mit Fachwissen unterstützt.
           </p>
 
           <p>
-            Mein Ansatz: Ihre Website ist Ihre{" "}
-            <span className="font-medium">digitale Visitenkarte</span>. Ich
-            setze technisches Know-how gezielt für Ihren Geschäftserfolg ein –
-            verständlich erklärt und transparent umgesetzt.
+            Mein Fokus:{" "}
+            <span className="font-medium">
+              Kleinunternehmen und Einzelunternehmer
+            </span>
+            verdienen professionelle KI-Lösungen. Ich entwickle erschwingliche,
+            maßgeschneiderte Chatbots, die Ihre Kundenbetreuung automatisieren
+            und Ihnen mehr Zeit für Ihr Kerngeschäft verschaffen – verständlich
+            erklärt und transparent umgesetzt.
           </p>
         </div>
         <div className="relative mx-auto md:mx-0 md:w-[320px] md:h-[320px] sm:w-[300px] sm:h-[300px] w-[255px] h-[255px] md:ml-24 opacity-90">
