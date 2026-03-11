@@ -51,13 +51,13 @@ export function HeroHighlightDemo() {
               animation: "fadeIn 0.9s ease-out 0.6s forwards",
             }}
             onClick={() => {
-              const servicesSection = document.getElementById("services");
-              if (servicesSection) {
-                servicesSection.scrollIntoView({ behavior: "smooth" });
+              const contactSection = document.getElementById("contact");
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: "smooth" });
               }
             }}
           >
-            Chatbot-Demo
+            Kostenlose Chatbot-Demo sichern
           </button>
         </div>
       </HeroHighlight>
