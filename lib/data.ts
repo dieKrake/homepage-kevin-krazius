@@ -54,15 +54,15 @@ export const projectsData = [
   {
     title: "Intelligente Kundenbetreuung",
     description:
-      "RAG-basierte Chatbots für präzise Antworten auf Kundenfragen. 24/7 Verfügbarkeit mit nahtloser Integration in Ihre bestehende Website.",
+      "RAG-basierte Chatbots für präzise Antworten auf Kundenfragen. 24/7 Verfügbarkeit mit Integration in Ihre bestehende Website.",
     tags: ["RAG-Technologie", "24/7 Support", "Website Integration"],
     imageUrl: digitalImage,
   },
   {
     title: "Branchenspezifische Lösungen",
     description:
-      "Anpassung an Ihre Fachterminologie und Schulung mit Unternehmensdaten. Vollständige Compliance und Datenschutz nach deutschen Standards.",
-    tags: ["Fachterminologie", "Unternehmensdaten", "DSGVO-konform"],
+      "Anpassung an Ihre Fachterminologie und Schulung mit Unternehmensdaten.",
+    tags: ["Fachterminologie", "Unternehmensdaten"],
     imageUrl: devicesImage,
   },
   {
@@ -76,7 +76,7 @@ export const projectsData = [
     title: "Kontinuierliche Optimierung",
     description:
       "Lernende Systeme mit Performance-Monitoring und regelmäßigen Updates. Ihr Chatbot wird kontinuierlich intelligenter.",
-    tags: ["Machine Learning", "Performance-Monitoring", "Updates"],
+    tags: ["Machine Learning", "Performance-Monitoring"],
     imageUrl: uiImage,
   },
 ] as const;
