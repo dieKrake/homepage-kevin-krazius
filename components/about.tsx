@@ -24,7 +24,9 @@ export default function About() {
               Bachelorarbeit mit KI-Schwerpunkt
             </span>{" "}
             und praktische Erfahrung im{" "}
-            <span className="font-medium">LLM- und Prompt-Engineering</span>
+            <span className="font-medium">
+              LLM- und Prompt-Engineering
+            </span>{" "}
             bilden das Fundament für maßgeschneiderte Automatisierungslösungen.
           </p>
 
@@ -48,7 +50,7 @@ export default function About() {
           <p>
             Mein Fokus:{" "}
             <span className="font-medium">
-              Kleinunternehmen und Einzelunternehmer
+              Kleinunternehmen und Einzelunternehmer{" "}
             </span>
             verdienen professionelle KI-Lösungen. Ich entwickle erschwingliche,
             maßgeschneiderte Chatbots, die Ihre Kundenbetreuung automatisieren
