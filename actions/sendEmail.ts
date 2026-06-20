@@ -1,8 +1,8 @@
 "use server";
 
 import React from "react";
-import { error } from "console";
 import { Resend } from "resend";
+import { render } from "@react-email/components";
 import { validateString } from "@/lib/utils";
 import { getErrorMessage } from "@/lib/utils";
 import ContactFormEmail from "@/email/contact-form-email";
@@ -27,15 +27,19 @@ export const sendEmail = async (formData: FormData) => {
 
   let data;
   try {
+    const html = await render(
+      React.createElement(ContactFormEmail, {
+        message: message as string,
+        senderEmail: senderEmail as string,
+      }),
+    );
+
     data = await resend.emails.send({
       from: "Contact Form <noreply@notifications.krazius-solutions.com>",
       to: "kevin@krazius-solutions.com",
       subject: "Message from Contact Form",
       replyTo: senderEmail as string,
-      react: React.createElement(ContactFormEmail, {
-        message: message as string,
-        senderEmail: senderEmail as string,
-      }),
+      html,
     });
   } catch (error: unknown) {
     return {
