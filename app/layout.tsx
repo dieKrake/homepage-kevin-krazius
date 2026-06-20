@@ -9,6 +9,7 @@ import ScrollToTop from "@/components/scroll-to-top";
 import CookieProvider from "@/context/cookie-context";
 import CookieBanner from "@/components/cookie-banner";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -43,6 +44,7 @@ export default function RootLayout({
           <Toaster position="top-right" />
           <CookieBanner />
           <Analytics />
+          <SpeedInsights />
           {/* <ThemeSwitch /> */}
           {/* </ThemeContextProvider> */}
         </CookieProvider>
