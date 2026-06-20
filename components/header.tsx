@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { BsBorderWidth, BsWhatsapp } from "react-icons/bs";
 import Image from "next/image";
 import { links } from "@/lib/data";
@@ -75,7 +75,7 @@ export default function Header() {
                         <Link
                           className={clsx(
                             "flex w-full items-center justify-center px-5 py-3 hover:text-black/90 transition text-gray-500 hover:text-gray-300",
-                            {}
+                            {},
                           )}
                           href={link.hash}
                           onClick={() => {
@@ -103,7 +103,7 @@ export default function Header() {
                     <Link
                       className={clsx(
                         "flex w-full items-center justify-center px-3 py-3 transition text-gray-500 hover:text-gray-300",
-                        {}
+                        {},
                       )}
                       href={link.hash}
                     >

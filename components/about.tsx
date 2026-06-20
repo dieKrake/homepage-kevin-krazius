@@ -2,7 +2,7 @@
 
 import React, { useEffect } from "react";
 import SectionHeading from "./section-heading";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export default function About() {
   return (

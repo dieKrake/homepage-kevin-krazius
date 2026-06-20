@@ -2,7 +2,7 @@
 
 import React from "react";
 import SectionHeading from "./section-heading";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { caseStudiesData } from "@/lib/data";
 
 export default function CaseStudies() {

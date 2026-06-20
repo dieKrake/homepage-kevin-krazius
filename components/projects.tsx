@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import SectionHeading from "./section-heading";
 import { projectsData } from "@/lib/data";
 import Project from "./project";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export default function Projects() {
   return (

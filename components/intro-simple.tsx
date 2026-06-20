@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import clsx from "clsx";
 import SimpleWave from "./simple-wave";
 
@@ -63,7 +63,7 @@ export default function IntroSimple() {
             <motion.button
               className={clsx(
                 "group flex items-center justify-center gap-2 w-full px-3 py-3 rounded-full border-2 transition-all duration-300 text-gray-900 hover:text-gray-950 transform hover:scale-110 bg-gray-300 hover:bg-gray-50 border-none",
-                {}
+                {},
               )}
               initial={{ opacity: 0, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
@@ -79,7 +79,7 @@ export default function IntroSimple() {
             <motion.button
               className={clsx(
                 "group flex items-center justify-center gap-2 w-full px-3 py-3 rounded-full border-2 transition-all duration-300 text-gray-900 hover:text-gray-950 transform hover:scale-110 bg-gray-300 hover:bg-gray-50 border-none",
-                {}
+                {},
               )}
               initial={{ opacity: 0, y: 0 }}
               animate={{ opacity: 1, y: 0 }}

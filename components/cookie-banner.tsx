@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { useCookieConsent } from "@/context/cookie-context";
 import { BsX, BsGear, BsShield, BsBarChart, BsBullseye } from "react-icons/bs";
 
