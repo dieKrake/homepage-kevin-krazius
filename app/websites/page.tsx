@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { motion } from "motion/react";
 import SectionHeading from "@/components/section-heading";
 import {
   FaLaptopCode,
@@ -49,13 +50,33 @@ export default function WebsitesPage() {
     <main className="flex flex-col items-center px-4 pt-32 pb-20 bg-gray-950 min-h-screen">
       <div className="w-full max-w-[72rem] flex flex-col items-center">
         {/* Header Sektion */}
-        <div className="text-center mb-16 max-w-2xl">
-          <SectionHeading>Moderne Web-Lösungen</SectionHeading>
-          <p className="text-gray-400 mt-4 text-base sm:text-lg">
-            Wir erstellen blitzschnelle, mobile-optimierte Next.js-Websites, die
-            Ihre Marke perfekt repräsentieren und Besucher in zahlende Kunden
-            verwandeln.
-          </p>
+        <div className="text-center mb-16 max-w-3xl">
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-block px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-6"
+          >
+            Digitaler Maßanzug
+          </motion.div>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-4xl sm:text-5xl font-bold text-white mb-6 tracking-tight"
+          >
+            High-End Websites für Ihr Business
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-gray-400 text-base sm:text-lg leading-relaxed"
+          >
+            Wir kombinieren Warp-Geschwindigkeit mit modernstem Design.
+            Verwandeln Sie Ihren Online-Auftritt in ein echtes Marketing-Asset,
+            das 24/7 für Sie arbeitet.
+          </motion.p>
         </div>
 
         {/* Benefits Grid */}

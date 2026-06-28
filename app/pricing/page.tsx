@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { motion } from "motion/react";
 import SectionHeading from "@/components/section-heading";
 import { FaCheck, FaTimes, FaCrown } from "react-icons/fa";
 
@@ -128,13 +129,33 @@ export default function PricingPage() {
     <main className="flex flex-col items-center px-4 pt-32 pb-20 bg-gray-950 min-h-screen">
       <div className="w-full max-w-[72rem] flex flex-col items-center">
         {/* Header Sektion */}
-        <div className="text-center mb-16 max-w-2xl">
-          <SectionHeading>Transparente Preismodelle</SectionHeading>
-          <p className="text-gray-400 mt-4 text-base sm:text-lg">
-            Sichern Sie sich einen professionellen Online-Auftritt zum
-            monatlichen Festpreis inklusive Full-Service oder investieren Sie
-            einmalig in volle Unabhängigkeit.
-          </p>
+        <div className="text-center mb-16 max-w-3xl">
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-block px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-500 text-xs font-semibold uppercase tracking-wider mb-6"
+          >
+            Investition in Ihr Wachstum
+          </motion.div>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-4xl sm:text-5xl font-bold text-white mb-6 tracking-tight"
+          >
+            Klare Preise, Volle Transparenz
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-gray-400 text-base sm:text-lg leading-relaxed"
+          >
+            Keine versteckten Kosten, keine bösen Überraschungen. Wählen Sie das
+            Modell, das perfekt zu Ihren Wachstumszielen passt – monatlich
+            flexibel oder einmalig unabhängig.
+          </motion.p>
         </div>
 
         {/* Website Miete (Abos) Grid */}
