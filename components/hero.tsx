@@ -1,90 +1,80 @@
 "use client";
+
 import { motion } from "motion/react";
-import { HeroBackground, Highlight } from "./hero-background";
 import Link from "next/link";
 
 export function Hero() {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.1 }}
-      className="w-full"
-    >
-      <HeroBackground>
-        <motion.h1
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-          animate={{
-            opacity: 1,
-            y: [20, -5, 0],
-          }}
-          transition={{
-            duration: 0.5,
-            ease: [0.4, 0.0, 0.2, 1],
-          }}
-          className="text-4xl px-4 md:text-5xl lg:text-6xl font-bold text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto mt-0 sm:mt-10"
+    <section className="relative w-full min-h-[90vh] flex flex-col items-center justify-center pt-20 pb-16 overflow-hidden">
+      {/* Subtle Background Elements */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-[1200px] pointer-events-none">
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-600/10 rounded-full blur-[120px]" />
+        <div className="absolute bottom-[10%] right-[-5%] w-[35%] h-[35%] bg-purple-600/10 rounded-full blur-[120px]" />
+      </div>
+
+      <div className="relative z-10 w-full max-w-5xl px-4 flex flex-col items-center text-center">
+        {/* Eyebrow Headline */}
+        <motion.span
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-blue-500 font-semibold tracking-[0.2em] uppercase text-xs sm:text-sm mb-6 bg-blue-500/10 px-4 py-1.5 rounded-full border border-blue-500/20"
         >
-          Mehr Kunden durch
-          <br />
-          <Highlight className="text-white">Online-Auftritt & SEO</Highlight>
+          Ihre Agentur für digitales Wachstum
+        </motion.span>
+
+        {/* Main Headline */}
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white tracking-tight leading-[1.1] mb-8"
+        >
+          Mehr Kunden durch <br />
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-blue-200 to-purple-400">
+            Online-Auftritt & SEO
+          </span>
         </motion.h1>
 
+        {/* Sub-headline / Paragraph */}
         <motion.p
-          className="hidden sm:block text-base sm:text-2xl text-gray-50 !leading-[1.6] text-center mt-12 max-w-4xl mx-4"
-          initial={{ opacity: 0, y: 100 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-gray-400 text-lg sm:text-xl md:text-2xl max-w-3xl leading-relaxed mb-12 px-4"
         >
           Wir erstellen & betreuen Ihre hochperformante Next.js Website
-          inklusive professioneller SEO-Optimierung.
-          <br />
-          Wahlweise als monatliches All-Inclusive-Abo ab 149€ oder als
-          klassischer Kauf — auf Wunsch erweitert mit intelligenten 24/7
-          KI-Chatbots für vollautomatische Kundengewinnung.
+          inklusive professioneller SEO-Optimierung. Wahlweise zum monatlichen
+          Festpreis oder als klassischer Kauf — auf Wunsch mit intelligenten
+          KI-Chatbots.
         </motion.p>
 
-        <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center items-center">
+        {/* Call to Actions */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto items-center justify-center"
+        >
           <button
-            className="group flex text-sm sm:text-base items-center justify-center px-6 py-3 sm:px-12 sm:py-4 rounded-lg border-2 transition-all duration-300 text-black hover:text-gray-950 bg-white hover:bg-gray-50 border-none md:hover:scale-105"
-            style={{
-              opacity: 0,
-              animation: "fadeIn 0.9s ease-out 0.6s forwards",
-            }}
             onClick={() => {
               const contactSection = document.getElementById("contact");
               if (contactSection) {
                 contactSection.scrollIntoView({ behavior: "smooth" });
               }
             }}
+            className="w-full sm:w-auto bg-white text-gray-950 font-bold px-10 py-5 rounded-2xl hover:bg-gray-100 transition-all duration-300 shadow-xl shadow-white/5 active:scale-95"
           >
             Kostenloses Erstgespräch
           </button>
           <Link
             href="/pricing"
-            className="group flex text-sm sm:text-base items-center justify-center px-6 py-3 sm:px-12 sm:py-4 rounded-lg border-2 border-white/20 transition-all duration-300 text-white hover:text-gray-200 bg-transparent hover:bg-white/5 md:hover:scale-105"
-            style={{
-              opacity: 0,
-              animation: "fadeIn 0.9s ease-out 0.8s forwards",
-            }}
+            className="w-full sm:w-auto bg-white/5 text-white font-semibold px-10 py-5 rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 backdrop-blur-sm active:scale-95"
           >
             Preismodelle ansehen
           </Link>
-        </div>
-      </HeroBackground>
-
-      <style jsx>{`
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
-        }
-      `}</style>
-    </motion.div>
+        </motion.div>
+      </div>
+    </section>
   );
 }
