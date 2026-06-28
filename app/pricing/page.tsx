@@ -100,7 +100,7 @@ export default function PricingPage() {
   const faqs = [
     {
       q: "Wie lange ist die Mindestvertragslaufzeit bei den Web-Abos?",
-      a: "Unsere monatlichen Web-Abos (Website-as-a-Service) haben eine Mindestlaufzeit von 24 Monaten. Danach verlängert sich der Vertrag automatisch um jeweils 12 Monate und ist mit einer Frist von 3 Monaten kündbar.",
+      a: "Unsere monatlichen Web-Abos (Website-as-a-Service) haben eine Mindestlaufzeit von 24 Monaten. Danach verlängert sich der Vertrag automatisch um jeweils 12 Monate und ist mit einer Frist von 3 Monaten zum Vertragsende kündbar. Der erste Monat dient als Vertrauensaufbau und wenn unser Service nicht gefällt, kann innerhalb der ersten 30 Tage gekündigt werden.",
     },
     {
       q: "Warum ist das Abo-Modell für mich besser als ein Einmalkauf?",
@@ -120,7 +120,7 @@ export default function PricingPage() {
     },
     {
       q: "Bieten Sie auch klassische Einmalzahlungen an?",
-      a: "Ja, absolut. Wenn Sie Ihre Website direkt kaufen möchten, bieten wir individuelle Next.js-Projekte ab einmalig 1.990 € an. Auf Wunsch können Sie danach einen kleinen Wartungsvertrag für Updates und Hosting ab 49 €/Monat dazubuchen.",
+      a: "Ja, absolut. Wenn Sie Ihre Website direkt kaufen möchten, bieten wir individuelle Next.js-Projekte ab einmalig 2.990 € an. Auf Wunsch können Sie danach einen kleinen Wartungsvertrag für Updates und Hosting ab 49 €/Monat dazubuchen.",
     },
   ];
 
@@ -256,7 +256,7 @@ export default function PricingPage() {
               Sie bevorzugen eine einmalige Investition für maximale
               Unabhängigkeit? Wir erstellen Ihre maßgeschneiderte
               Next.js-Website schlüsselfertig ab einmalig{" "}
-              <span className="text-white font-semibold">1.990 €</span>.
+              <span className="text-white font-semibold">2.990 €</span>.
               Profitieren Sie von uneingeschränktem Eigentum am Code und
               exzellentem initialen SEO-Setup. Optionaler Wartungsvertrag
               (Hosting, SSL, Backups & Support) ab 49 €/Monat buchbar.
