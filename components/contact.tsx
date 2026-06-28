@@ -125,7 +125,7 @@ export default function Contact() {
                 }}
                 className="mt-4 flex items-center justify-center gap-3 w-full py-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-blue-900/20 group"
               >
-                <FaCalendarAlt className="text-xl group-hover:rotate-12 transition-transform" />
+                <FaCalendarAlt className="text-xl group-hover:rotate-12 transition-transform opacity-70" />
                 Termin online buchen
               </button>
             </div>
@@ -165,12 +165,12 @@ export default function Contact() {
               />
             </div>
 
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 flex-1">
               <label className="text-xs uppercase tracking-widest text-gray-500 font-semibold ml-1">
                 Ihre Nachricht
               </label>
               <textarea
-                className="h-52 p-4 rounded-xl border border-white/10 bg-white/5 text-white focus:bg-white/10 focus:border-white/20 transition-all outline-none resize-none"
+                className="flex-1 min-h-[13rem] p-4 rounded-xl border border-white/10 bg-white/5 text-white focus:bg-white/10 focus:border-white/20 transition-all outline-none resize-none"
                 name="message"
                 placeholder="Wie können wir Ihnen helfen?"
                 required

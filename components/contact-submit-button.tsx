@@ -8,7 +8,7 @@ export default function ContactSubmitButton() {
   return (
     <button
       type="submit"
-      className="group flex items-center justify-center gap-2 h-[3.5rem] w-full sm:w-[12rem] bg-blue-600 text-white rounded-xl outline-none transition-all focus:scale-105 hover:scale-105 hover:bg-blue-700 active:scale-100 disabled:scale-100 disabled:bg-opacity-65 shadow-lg shadow-blue-500/20"
+      className="group flex items-center justify-center gap-2 h-[3.5rem] w-full sm:w-[12rem] bg-blue-600 text-white rounded-xl outline-none transition-all focus:scale-105 hover:scale-105 hover:bg-blue-700 active:scale-100 disabled:scale-100 disabled:bg-opacity-65 shadow-lg shadow-blue-500/20 font-bold"
       disabled={pending}
     >
       {pending ? (
