@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "motion/react";
 import Link from "next/link";
@@ -8,73 +8,73 @@ import Link from "next/link";
 export default function About() {
   return (
     <motion.section
-      className="sm:px-4 mb-28 md:max-w-[65rem] sm:max-w-[60rem] text-center leading-8 sm:mt-0 scroll-mt-28"
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.175 }}
+      className="w-full max-w-[72rem] px-4 mb-28 scroll-mt-28 relative"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
       id="about"
     >
-      <div className="flex flex-col-reverse md:flex-row gap-16 items-center">
-        <div className="text-left flex-1 md:max-w-[65%]">
-          <h2 className="text-3xl font-medium mb-8 text-left">Über mich</h2>
-          <p>
-            Mein Name ist Kevin Krazius und ich bin KI-Spezialist aus
-            Leidenschaft mit Fokus auf intelligente Chatbot-Lösungen. Meine
-            <span className="font-medium">
-              {" "}
-              Bachelorarbeit mit KI-Schwerpunkt
-            </span>{" "}
-            und praktische Erfahrung im{" "}
-            <span className="font-medium">
-              LLM- und Prompt-Engineering
-            </span>{" "}
-            bilden das Fundament für maßgeschneiderte Automatisierungslösungen.
-          </p>
+      {/* Background Decor */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none -z-10">
+        <div className="absolute top-[20%] right-[-10%] w-[30%] h-[30%] bg-blue-600/5 rounded-full blur-[100px]" />
+      </div>
 
-          <p>
-            Mein KI-Tech-Stack:{" "}
-            <span className="font-medium">
-              RAG-Technologie, OpenAI GPT, LangChain und Vector-Datenbanken
-            </span>
-            . Ich entwickle Chatbots, die nicht nur antworten, sondern Ihr
-            Unternehmenswissen intelligent nutzen und kontinuierlich dazulernen.
-          </p>
+      <div className="flex flex-col lg:flex-row gap-16 items-center p-8 sm:p-12 rounded-3xl border border-white/10 bg-white/[0.02] backdrop-blur-sm">
+        <div className="relative flex-shrink-0">
+          <div className="relative w-[240px] h-[240px] sm:w-[320px] sm:h-[320px] rounded-2xl overflow-hidden border border-white/10 p-2 bg-white/5">
+            <img
+              src="/images/kkrazius_bild.jpg"
+              alt="Kevin Krazius"
+              className="w-full h-full object-cover rounded-xl grayscale hover:grayscale-0 transition-all duration-500"
+              style={{ objectPosition: "center 5%" }}
+            />
+          </div>
+          {/* Decorative element */}
+          <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-blue-600/20 rounded-full blur-2xl -z-10" />
+        </div>
 
-          <p>
-            <span className="italic">RAG-Technologie</span> (Retrieval-Augmented
-            Generation) ermöglicht es Chatbots, auf Ihre spezifischen
-            Unternehmensdaten zuzugreifen und präzise, kontextbezogene Antworten
-            zu geben. So wird Ihr Chatbot zum intelligenten Berater, der Ihre
-            Kunden mit Fachwissen unterstützt.
-          </p>
+        <div className="flex-1 text-left">
+          <span className="text-blue-500 font-semibold tracking-widest uppercase text-xs mb-4 block">
+            Über mich
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            Kevin Krazius
+          </h2>
 
-          <p>
-            Mein Fokus:{" "}
-            <span className="font-medium">
-              Kleinunternehmen und Einzelunternehmer{" "}
-            </span>
-            verdienen professionelle KI-Lösungen. Ich entwickle erschwingliche,
-            maßgeschneiderte Chatbots, die Ihre Kundenbetreuung automatisieren
-            und Ihnen mehr Zeit für Ihr Kerngeschäft verschaffen – verständlich
-            erklärt und transparent umgesetzt.
-          </p>
+          <div className="space-y-4 text-gray-400 leading-relaxed text-base sm:text-lg">
+            <p>
+              Ich verbinde{" "}
+              <span className="text-white font-medium">
+                moderne Webentwicklung
+              </span>{" "}
+              mit zukunftsweisender{" "}
+              <span className="text-white font-medium">KI-Expertise</span>. Mein
+              Ziel ist es, Kleinunternehmen nicht nur eine digitale Visitenkarte
+              zu geben, sondern eine echte Wachstumsmaschine zu bauen.
+            </p>
+            <p>
+              Durch meinen akademischen Hintergrund im Bereich KI und meine
+              Spezialisierung auf{" "}
+              <span className="text-white font-medium">RAG-Systeme</span>{" "}
+              entwickle ich Chatbots, die Ihre Kundenberatung automatisieren und
+              verpasste Chancen in wertvolle Leads verwandeln.
+            </p>
+            <p>
+              Von der pfeilschnellen Next.js Website über messbares Local SEO
+              bis hin zu vollautomatisierten Prozessabläufen — ich begleite Sie
+              ganzheitlich auf Ihrem Weg zum digitalen Erfolg.
+            </p>
+          </div>
 
-          <div className="mt-8 flex justify-start">
+          <div className="mt-10">
             <Link
               href="/about"
-              className="group bg-gray-900 text-white px-6 py-2 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition border border-white/10"
+              className="inline-flex items-center justify-center px-8 py-3 bg-white/5 border border-white/10 text-white font-semibold rounded-xl hover:bg-white/10 transition-all active:scale-95"
             >
-              Mehr erfahren
+              Vollständiges Profil ansehen
             </Link>
           </div>
-        </div>
-        <div className="relative mx-auto md:mx-0 md:w-[320px] md:h-[320px] sm:w-[300px] sm:h-[300px] w-[255px] h-[255px] md:ml-24 opacity-90">
-          <img
-            src="/website_pic.jpg"
-            alt="Kevin Krazius"
-            className="rounded-full object-cover h-full w-full shadow-xl border-4 border-gray-500 border-opacity-50 opacity-80"
-            style={{ objectPosition: "center 5%" }}
-          />
         </div>
       </div>
     </motion.section>

@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { BsBorderWidth, BsWhatsapp } from "react-icons/bs";
+import { BsWhatsapp } from "react-icons/bs";
+import { FaBars } from "react-icons/fa";
 import Image from "next/image";
 import { links } from "@/lib/data";
 import Link from "next/link";
@@ -27,95 +28,97 @@ export default function Header() {
       {/* Navbar Container */}
       <motion.div
         className={clsx(
-          "fixed top-0 left-1/2 -translate-x-1/2 w-full h-[5rem] transition-all duration-300 border-b",
+          "fixed top-0 left-0 w-full h-[5rem] transition-all duration-300 border-b z-[998]",
           scrolled
             ? "bg-gray-950/80 backdrop-blur-lg border-white/10 h-[4.5rem]"
             : "bg-transparent border-transparent",
         )}
-        initial={{ y: -100, x: "-50%", opacity: 0 }}
-        animate={{ y: 0, x: "-50%", opacity: 1 }}
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
       />
 
-      <nav className="flex fixed top-0 left-1/2 h-[5rem] w-full -translate-x-1/2 px-4 sm:px-8 max-w-screen-2xl items-center justify-between transition-all duration-300">
-        {/* Company Logo */}
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          className="flex items-center"
-        >
-          <Link href="/" className="cursor-pointer group">
-            <Image
-              src="/Krazius-Solutions-Logo.webp"
-              alt="Logo"
-              width={120}
-              height={120}
-              className="h-12 sm:h-14 w-auto group-hover:scale-105 transition-transform"
-            />
-          </Link>
-        </motion.div>
-
-        {/* Desktop Navigation */}
-        <div className="hidden custom-sm:flex items-center gap-2 bg-white/5 border border-white/10 px-2 py-1.5 rounded-full backdrop-blur-sm">
-          <ul className="flex flex-row items-center gap-1 text-[0.95rem] font-medium">
-            {links.map((link) => (
-              <li
-                key={link.hash}
-                className="relative flex items-center justify-center"
-              >
-                <Link
-                  className={clsx(
-                    "relative px-4 py-2 transition-colors duration-200 rounded-full",
-                    pathname === link.hash
-                      ? "text-white"
-                      : "text-gray-400 hover:text-gray-200",
-                  )}
-                  href={link.hash}
-                >
-                  {link.name}
-                  {link.hash === pathname && (
-                    <motion.span
-                      className="absolute inset-0 bg-white/10 rounded-full -z-10"
-                      layoutId="activeSection"
-                      transition={{
-                        type: "spring",
-                        stiffness: 380,
-                        damping: 30,
-                      }}
-                    />
-                  )}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Right Side: CTA & Mobile Toggle */}
-        <div className="flex items-center gap-4">
-          {/* WhatsApp CTA */}
+      <nav className="fixed top-0 left-0 w-full h-[5rem] px-4 sm:px-8 flex items-center justify-center transition-all duration-300 z-[999]">
+        <div className="w-full max-w-screen-2xl flex items-center justify-between">
+          {/* Company Logo */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
+            className="flex items-center"
           >
-            <a
-              href="https://wa.me/1624059165"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2.5 px-4 py-2.5 sm:px-5 sm:py-3 bg-emerald-500 hover:bg-emerald-600 text-gray-950 font-bold text-sm rounded-xl transition-all shadow-lg shadow-emerald-500/10 active:scale-95"
-            >
-              <span className="hidden min-[1350px]:block">Kontakt</span>
-              <BsWhatsapp className="text-xl" />
-            </a>
+            <Link href="/" className="cursor-pointer group">
+              <Image
+                src="/Krazius-Solutions-Logo.webp"
+                alt="Logo"
+                width={120}
+                height={120}
+                className="h-10 sm:h-12 w-auto group-hover:scale-105 transition-transform"
+              />
+            </Link>
           </motion.div>
 
-          {/* Mobile Menu Toggle */}
-          <motion.button
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="block custom-sm:hidden p-2.5 bg-white/5 border border-white/10 rounded-xl text-white hover:bg-white/10 transition-colors"
-          >
-            <BsBorderWidth size={24} />
-          </motion.button>
+          {/* Desktop Navigation */}
+          <div className="hidden custom-sm:flex items-center gap-2 bg-white/5 border border-white/10 px-2 py-1.5 rounded-full backdrop-blur-sm">
+            <ul className="flex flex-row items-center gap-1 text-[0.95rem] font-medium">
+              {links.map((link) => (
+                <li
+                  key={link.hash}
+                  className="relative flex items-center justify-center"
+                >
+                  <Link
+                    className={clsx(
+                      "relative px-4 py-2 transition-colors duration-200 rounded-full",
+                      pathname === link.hash
+                        ? "text-white"
+                        : "text-gray-400 hover:text-gray-200",
+                    )}
+                    href={link.hash}
+                  >
+                    {link.name}
+                    {link.hash === pathname && (
+                      <motion.span
+                        className="absolute inset-0 bg-white/10 rounded-full -z-10"
+                        layoutId="activeSection"
+                        transition={{
+                          type: "spring",
+                          stiffness: 380,
+                          damping: 30,
+                        }}
+                      />
+                    )}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Right Side: CTA & Mobile Toggle */}
+          <div className="flex items-center gap-4">
+            {/* WhatsApp CTA */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+            >
+              <a
+                href="https://wa.me/1624059165"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2.5 px-4 py-2.5 sm:px-5 sm:py-3 bg-emerald-500 hover:bg-emerald-600 text-gray-950 font-bold text-sm rounded-xl transition-all shadow-lg shadow-emerald-500/10 active:scale-95"
+              >
+                <span className="hidden min-[1350px]:block">Kontakt</span>
+                <BsWhatsapp className="text-xl" />
+              </a>
+            </motion.div>
+
+            {/* Mobile Menu Toggle */}
+            <motion.button
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="block custom-sm:hidden p-2.5 bg-white/5 border border-white/10 rounded-xl text-white hover:bg-white/10 transition-colors"
+            >
+              <FaBars size={22} />
+            </motion.button>
+          </div>
         </div>
 
         {/* Mobile Menu Dropdown */}

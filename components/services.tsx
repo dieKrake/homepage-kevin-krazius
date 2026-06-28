@@ -33,7 +33,7 @@ export default function Services() {
       </motion.div>
 
       <motion.section
-        className="mb-16 max-w-[50rem] text-center leading-8 scroll-mt-28 w-full"
+        className="mb-16 max-w-[50rem] text-center leading-8 scroll-mt-28 w-full hyphens-auto break-words"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -44,11 +44,11 @@ export default function Services() {
           <span className="text-white font-medium">Next.js Webentwicklung</span>{" "}
           mit effektiver{" "}
           <span className="text-white font-medium">
-            Suchmaschinenoptimierung (SEO)
+            {"Such\u00ADmaschinen\u00ADoptimierung (SEO)"}
           </span>{" "}
           und intelligenten{" "}
           <span className="text-white font-medium">
-            RAG KI-Chatbot-Lösungen
+            {"RAG KI-Chatbot-Lösungen"}
           </span>
           .
         </p>
@@ -65,11 +65,14 @@ export default function Services() {
             transition={{ delay: index * 0.1 }}
           >
             <div className="flex items-center gap-4 mb-6">
-              <div className="p-4 rounded-xl bg-white/5 border border-white/10 text-2xl group-hover:scale-110 transition-transform duration-300">
+              <div className="p-4 rounded-xl bg-white/5 border border-white/10 text-2xl group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
                 {icons[index]}
               </div>
-              <h3 className="text-2xl font-bold text-white leading-tight">
-                {service.title}
+              <h3 className="text-xl sm:text-2xl font-bold text-white leading-tight hyphens-auto break-words">
+                {service.title.replace(
+                  "Suchmaschinenoptimierung",
+                  "Such\u00ADmaschinen\u00ADoptimierung",
+                )}
               </h3>
             </div>
 

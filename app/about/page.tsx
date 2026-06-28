@@ -1,67 +1,150 @@
+"use client";
+
 import React from "react";
 import SectionHeading from "@/components/section-heading";
+import { motion } from "motion/react";
+import { FaGraduationCap, FaCode, FaRobot, FaRocket } from "react-icons/fa";
 
 export default function AboutPage() {
+  const expertise = [
+    {
+      icon: <FaGraduationCap className="text-blue-500" />,
+      title: "Akademischer Fokus",
+      description:
+        "Bachelorarbeit mit KI-Schwerpunkt als Fundament für tiefgreifendes Verständnis moderner Sprachmodelle.",
+    },
+    {
+      icon: <FaCode className="text-emerald-500" />,
+      title: "KI-Tech-Stack",
+      description:
+        "Spezialisierung auf RAG-Technologie, OpenAI GPT, LangChain und Vector-Datenbanken wie Pinecone.",
+    },
+    {
+      icon: <FaRobot className="text-amber-500" />,
+      title: "Intelligente Chatbots",
+      description:
+        "Entwicklung von Systemen, die nicht nur antworten, sondern Ihr Unternehmenswissen aktiv nutzen.",
+    },
+    {
+      icon: <FaRocket className="text-purple-500" />,
+      title: "Automatisierung",
+      description:
+        "Effizienzsteigerung für Kleinunternehmen durch maßgeschneiderte KI-gestützte Prozesse.",
+    },
+  ];
+
   return (
-    <main className="flex flex-col items-center px-4 pt-36 pb-20">
-      <SectionHeading>Über uns</SectionHeading>
-      
-      <section className="sm:px-4 md:max-w-[65rem] sm:max-w-[60rem] text-center leading-8 scroll-mt-28">
-        <div className="flex flex-col-reverse md:flex-row gap-16 items-center">
-          <div className="text-left flex-1 md:max-w-[65%]">
-            <h2 className="text-3xl font-medium mb-8 text-left text-white">Kevin Krazius</h2>
-            <p className="text-gray-300 mb-4">
-              Mein Name ist Kevin Krazius und ich bin KI-Spezialist aus
-              Leidenschaft mit Fokus auf intelligente Chatbot-Lösungen. Meine
-              <span className="font-medium text-white">
-                {" "}
-                Bachelorarbeit mit KI-Schwerpunkt
+    <main className="flex flex-col items-center px-4 pt-32 pb-20 bg-gray-950 min-h-screen overflow-x-hidden">
+      {/* Background Decor */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-[1200px] pointer-events-none -z-10">
+        <div className="absolute top-[10%] left-[-20%] w-[50%] h-[50%] bg-blue-600/5 rounded-full blur-[120px]" />
+        <div className="absolute top-[40%] right-[-10%] w-[40%] h-[40%] bg-purple-600/5 rounded-full blur-[120px]" />
+      </div>
+
+      <div className="w-full max-w-[72rem]">
+        {/* Intro Section */}
+        <section className="mb-24 flex flex-col md:flex-row gap-16 items-center">
+          <motion.div
+            className="flex-1 text-center md:text-left"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <span className="text-blue-500 font-semibold tracking-widest uppercase text-sm mb-4 block">
+              Über mich
+            </span>
+            <h1 className="text-5xl sm:text-6xl font-bold text-white mb-8 leading-tight">
+              Kevin Krazius
+            </h1>
+            <p className="text-gray-400 text-lg leading-relaxed mb-6">
+              Ich verbinde{" "}
+              <span className="text-white font-medium">
+                moderne Webentwicklung
               </span>{" "}
-              und praktische Erfahrung im{" "}
-              <span className="font-medium text-white">
-                LLM- und Prompt-Engineering
-              </span>{" "}
-              bilden das Fundament für maßgeschneiderte Automatisierungslösungen.
+              mit zukunftsweisender{" "}
+              <span className="text-white font-medium">KI-Expertise</span>. Mein
+              Ziel ist es, Unternehmen nicht nur eine digitale Präsenz zu
+              verschaffen, sondern echte technologische Wettbewerbsvorteile zu
+              generieren.
             </p>
+            <p className="text-gray-400 text-lg leading-relaxed">
+              Vom ersten Entwurf einer hochperformanten Website über die
+              gezielte Sichtbarkeit durch Local SEO bis hin zur Integration
+              intelligenter{" "}
+              <span className="text-white font-medium">RAG-Chatbots</span> — ich
+              begleite Sie ganzheitlich bei der digitalen Transformation Ihres
+              Geschäfts.
+            </p>
+          </motion.div>
 
-            <p className="text-gray-300 mb-4">
-              Mein KI-Tech-Stack:{" "}
-              <span className="font-medium text-white">
-                RAG-Technologie, OpenAI GPT, LangChain und Vector-Datenbanken
-              </span>
-              . Ich entwickle Chatbots, die nicht nur antworten, sondern Ihr
-              Unternehmenswissen intelligent nutzen und kontinuierlich dazulernen.
-            </p>
+          <motion.div
+            className="relative"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="relative w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] rounded-3xl overflow-hidden border border-white/10 p-2 bg-white/5 backdrop-blur-sm">
+              <img
+                src="/images/kkrazius_bild.jpg"
+                alt="Kevin Krazius"
+                className="w-full h-full object-cover rounded-2xl hover:scale-105 transition-all duration-500"
+                style={{ objectPosition: "center 5%" }}
+              />
+            </div>
+            {/* Decorative elements */}
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-blue-600/20 rounded-full blur-2xl -z-10" />
+            <div className="absolute -top-6 -left-6 w-32 h-32 bg-purple-600/20 rounded-full blur-2xl -z-10" />
+          </motion.div>
+        </section>
 
-            <p className="text-gray-300 mb-4">
-              <span className="italic">RAG-Technologie</span> (Retrieval-Augmented
-              Generation) ermöglicht es Chatbots, auf Ihre spezifischen
-              Unternehmensdaten zuzugreifen und präzise, kontextbezogene Antworten
-              zu geben. So wird Ihr Chatbot zum intelligenten Berater, der Ihre
-              Kunden mit Fachwissen unterstützt.
-            </p>
-
-            <p className="text-gray-300">
-              Mein Fokus:{" "}
-              <span className="font-medium text-white">
-                Kleinunternehmen und Einzelunternehmer{" "}
-              </span>
-              verdienen professionelle KI-Lösungen. Ich entwickle erschwingliche,
-              maßgeschneiderte Chatbots, die Ihre Kundenbetreuung automatisieren
-              und Ihnen mehr Zeit für Ihr Kerngeschäft verschaffen – verständlich
-              erklärt und transparent umgesetzt.
-            </p>
+        {/* Expertise Grid */}
+        <section className="mb-24">
+          <div className="text-center mb-16">
+            <SectionHeading>Expertise & Fokus</SectionHeading>
           </div>
-          <div className="relative mx-auto md:mx-0 md:w-[320px] md:h-[320px] sm:w-[300px] sm:h-[300px] w-[255px] h-[255px] md:ml-24 opacity-90">
-            <img
-              src="/website_pic.jpg"
-              alt="Kevin Krazius"
-              className="rounded-full object-cover h-full w-full shadow-xl border-4 border-gray-500 border-opacity-50 opacity-80"
-              style={{ objectPosition: "center 5%" }}
-            />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {expertise.map((item, index) => (
+              <motion.div
+                key={index}
+                className="p-8 rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] transition-all group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <div className="p-4 rounded-xl bg-white/5 border border-white/10 text-2xl mb-6 inline-block group-hover:scale-110 transition-transform">
+                  {item.icon}
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">
+                  {item.title}
+                </h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  {item.description}
+                </p>
+              </motion.div>
+            ))}
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* Mission Section */}
+        <motion.section
+          className="p-8 sm:p-12 rounded-3xl border border-white/10 bg-white/[0.02] text-center"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-3xl font-bold text-white mb-8">Meine Mission</h2>
+          <p className="text-gray-400 text-lg leading-relaxed max-w-4xl mx-auto italic">
+            "RAG-Technologie (Retrieval-Augmented Generation) ermöglicht es
+            Chatbots, auf Ihre spezifischen Unternehmensdaten zuzugreifen und
+            präzise, kontextbezogene Antworten zu geben. Mein Ziel ist es, diese
+            High-End-Technologie für Kleinunternehmen und Einzelunternehmer
+            erschwinglich und nutzbar zu machen, damit sie mehr Zeit für ihr
+            Kerngeschäft haben."
+          </p>
+        </motion.section>
+      </div>
     </main>
   );
 }

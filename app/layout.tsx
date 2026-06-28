@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="de" className="!scroll-smooth">
       <body
-        className={`${inter.className} relative pt-[4.5rem] bg-gray-950 text-gray-50 text-opacity-90`}
+        className={`${inter.className} relative pt-[4.5rem] bg-gray-950 text-gray-50 text-opacity-90 overflow-x-hidden`}
       >
         <CookieProvider>
           <ScrollToTop />
