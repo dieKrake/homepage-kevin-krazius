@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import SectionHeading from "./section-heading";
 import { motion } from "motion/react";
 import Link from "next/link";
 
@@ -36,33 +35,34 @@ export default function About() {
 
         <div className="flex-1 text-left">
           <span className="text-blue-500 font-semibold tracking-widest uppercase text-xs mb-4 block">
-            Über mich
+            Über uns
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-            Kevin Krazius
+            Kevin Krazius <span className="text-blue-500">-</span> Full-Stack
+            Developer
           </h2>
 
           <div className="space-y-4 text-gray-400 leading-relaxed text-base sm:text-lg">
             <p>
-              Ich verbinde{" "}
+              Wir verbinden{" "}
               <span className="text-white font-medium">
                 moderne Webentwicklung
               </span>{" "}
               mit zukunftsweisender{" "}
-              <span className="text-white font-medium">KI-Expertise</span>. Mein
-              Ziel ist es, Unternehmen nicht nur eine digitale Visitenkarte zu
-              geben, sondern eine echte Wachstumsmaschine zu bauen.
+              <span className="text-white font-medium">KI-Expertise</span>.
+              Unser Ziel ist es, Unternehmen nicht nur eine digitale
+              Visitenkarte zu geben, sondern eine echte Wachstumsmaschine zu
+              bauen.
             </p>
             <p>
-              Durch meinen akademischen Hintergrund im Bereich KI und meine
-              Spezialisierung auf{" "}
+              Durch unsere Spezialisierung auf{" "}
               <span className="text-white font-medium">RAG-Systeme</span>{" "}
-              entwickle ich Chatbots, die Ihre Kundenberatung automatisieren und
-              verpasste Chancen in wertvolle Leads verwandeln.
+              entwickeln wir Chatbots, die Ihre Kundenberatung automatisieren
+              und verpasste Chancen in wertvolle Leads verwandeln.
             </p>
             <p>
               Von der pfeilschnellen Next.js Website über messbares Local SEO
-              bis hin zu vollautomatisierten Prozessabläufen — ich begleite Sie
+              bis hin zu vollautomatisierten Prozessabläufen — wir begleiten Sie
               ganzheitlich auf Ihrem Weg zum digitalen Erfolg.
             </p>
           </div>

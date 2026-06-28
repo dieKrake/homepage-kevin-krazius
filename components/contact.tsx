@@ -37,7 +37,7 @@ export default function Contact() {
     {
       icon: <FaClock className="text-purple-500" />,
       label: "Öffnungszeiten",
-      value: "Mo - Fr, 09:00 - 17:00 Uhr",
+      value: "Mo - Fr, 09:00 - 18:00 Uhr",
     },
     {
       icon: <FaMapMarkerAlt className="text-rose-500" />,

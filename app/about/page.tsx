@@ -11,13 +11,13 @@ export default function AboutPage() {
       icon: <FaRocket className="text-blue-500" />,
       title: "Digitale Sichtbarkeit",
       description:
-        "Ich sorge dafür, dass Ihr Unternehmen bei Google ganz oben steht. Durch gezieltes Local SEO heben wir Sie von der Konkurrenz ab und ziehen mehr Besucher an.",
+        "Wir sorgen dafür, dass Ihr Unternehmen bei Google ganz oben steht. Durch gezieltes Local SEO heben wir Sie von der Konkurrenz ab und ziehen mehr Besucher an.",
     },
     {
       icon: <FaCode className="text-emerald-500" />,
       title: "Conversion-Websites",
       description:
-        "Webseiten müssen mehr als nur gut aussehen. Ich entwickle verkaufsstarke Plattformen auf Next.js-Basis, die Besucher gezielt in Kunden verwandeln.",
+        "Webseiten müssen mehr als nur gut aussehen. Wir entwickeln verkaufsstarke Plattformen auf Next.js-Basis, die Besucher gezielt in Kunden verwandeln.",
     },
     {
       icon: <FaRobot className="text-amber-500" />,
@@ -29,7 +29,7 @@ export default function AboutPage() {
       icon: <FaGraduationCap className="text-purple-500" />,
       title: "Strategisches Wachstum",
       description:
-        "Als KI-Spezialist entwickle ich für Sie Strategien, die technologische Innovation direkt in messbaren Umsatz und Zeitersparnis übersetzen.",
+        "Als KI-Spezialisten entwickeln wir für Sie Strategien, die technologische Innovation direkt in messbaren Umsatz und Zeitersparnis übersetzen.",
     },
   ];
 
@@ -51,19 +51,19 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
           >
             <span className="text-blue-500 font-semibold tracking-widest uppercase text-sm mb-4 block">
-              Über mich
+              Über uns
             </span>
             <h1 className="text-5xl sm:text-6xl font-bold text-white mb-8 leading-tight">
               Kevin Krazius
             </h1>
             <p className="text-gray-400 text-lg leading-relaxed mb-6">
-              Ich verbinde{" "}
+              Wir verbinden{" "}
               <span className="text-white font-medium">
                 moderne Webentwicklung
               </span>{" "}
               mit zukunftsweisender{" "}
-              <span className="text-white font-medium">KI-Expertise</span>. Mein
-              Ziel ist es, Unternehmen nicht nur eine digitale Präsenz zu
+              <span className="text-white font-medium">KI-Expertise</span>.
+              Unser Ziel ist es, Unternehmen nicht nur eine digitale Präsenz zu
               verschaffen, sondern echte technologische Wettbewerbsvorteile zu
               generieren.
             </p>
@@ -71,8 +71,8 @@ export default function AboutPage() {
               Vom ersten Entwurf einer hochperformanten Website über die
               gezielte Sichtbarkeit durch Local SEO bis hin zur Integration
               intelligenter{" "}
-              <span className="text-white font-medium">RAG-Chatbots</span> — ich
-              begleite Sie ganzheitlich bei der digitalen Transformation Ihres
+              <span className="text-white font-medium">RAG-Chatbots</span> — wir
+              begleiten Sie ganzheitlich bei der digitalen Transformation Ihres
               Geschäfts.
             </p>
           </motion.div>
@@ -134,12 +134,12 @@ export default function AboutPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-bold text-white mb-8">Meine Mission</h2>
+          <h2 className="text-3xl font-bold text-white mb-8">Unsere Mission</h2>
           <p className="text-gray-400 text-lg leading-relaxed max-w-4xl mx-auto italic">
-            "Meine Mission ist es, Unternehmen durch die Symbiose aus
+            "Unsere Mission ist es, Unternehmen durch die Symbiose aus
             erstklassiger Webpräsenz und modernster KI-Technologie zu maximaler
-            Sichtbarkeit und nachhaltiger Kundengewinnung zu verhelfen. Ich
-            mache komplexe Innovationen wie RAG-Chatbots für jeden nutzbar –
+            Sichtbarkeit und nachhaltiger Kundengewinnung zu verhelfen. Wir
+            machen komplexe Innovationen wie RAG-Chatbots für jeden nutzbar –
             damit Technologie nicht nur Zeit spart, sondern aktiv Ihr Wachstum
             antreibt."
           </p>

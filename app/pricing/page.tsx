@@ -33,7 +33,7 @@ export default function PricingPage() {
       price: "249 €",
       period: "/ Monat",
       description:
-        "Unsere Komplettlösung für wachsende Unternehmen, die das Maximum aus ihrer Google-Sichtbarkeit herausholen möchten.",
+        "Unsere Komplettlösung für wachsende Unternehmen, die das Maximum aus Ihrer Google-Sichtbarkeit herausholen möchten.",
       features: [
         "Multi-Page Website (bis 5 Seiten)",
         "100% Mobile Responsive",
@@ -100,7 +100,7 @@ export default function PricingPage() {
   const faqs = [
     {
       q: "Wie lange ist die Mindestvertragslaufzeit bei den Web-Abos?",
-      a: "Unsere monatlichen Web-Abos (Website-as-a-Service) haben eine Mindestlaufzeit von 24 Monaten. Danach verlängert sich der Vertrag automatisch um jeweils 12 Monate und ist mit einer Frist von 3 Monaten zum Vertragsende kündbar. Der erste Monat dient als Vertrauensaufbau und wenn unser Service nicht gefällt, kann innerhalb der ersten 30 Tage gekündigt werden.",
+      a: "Unsere monatlichen Web-Abos (Website-as-a-Service) haben eine Mindestlaufzeit von 24 Monaten. Danach verlängert sich der Vertrag automatisch um jeweils 12 Monate und ist mit einer Frist von 3 Monaten zum Vertragsende kündbar. Der erste Monat dient zum Vertrauensaufbau: Sollte Ihnen unser Service nicht zusagen, können Sie innerhalb der ersten 30 Tage flexibel kündigen.",
     },
     {
       q: "Warum ist das Abo-Modell für mich besser als ein Einmalkauf?",

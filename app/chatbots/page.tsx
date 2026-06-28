@@ -31,7 +31,7 @@ export default function ChatbotsPage() {
     {
       icon: <FaChartLine className="text-purple-500 text-3xl" />,
       title: "Kontinuierliches Finetuning",
-      desc: "Eine KI ist nur so gut wie ihr Training. Unser Premium-Abo beinhaltet monatliche Leistungskontrollen und kontinuierliche Aktualisierungen der Wissensdatenbank, damit der Chatbot stetig intelligenter wird.",
+      desc: "Eine KI ist nur so gut wie Ihr Training. Unser Premium-Abo beinhaltet monatliche Leistungskontrollen und kontinuierliche Aktualisierungen der Wissensdatenbank, damit der Chatbot stetig intelligenter wird.",
     },
     {
       icon: <FaRobot className="text-cyan-500 text-3xl" />,
