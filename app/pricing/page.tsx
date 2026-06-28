@@ -73,11 +73,11 @@ export default function PricingPage() {
   const addons = [
     {
       title: "RAG KI-Chatbot",
-      price: "ab 99 €",
+      price: "ab 199 €",
       period: "/ Monat",
       description:
         "Intelligenter 24/7 Support-Assistent, geschult auf Ihren Firmendaten. Inklusive Lead-Erfassung und WhatsApp-Anbindung.",
-      setup: "+ 990 € einmaliges Setup",
+      setup: "+ 5000 € einmaliges Setup",
     },
     {
       title: "Local SEO Pro",
@@ -301,9 +301,7 @@ export default function PricingPage() {
 
                 <div
                   className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                    activeFaq === index
-                      ? "max-h-[300px] border-t border-white/5"
-                      : "max-h-0"
+                    activeFaq === index ? "max-h-[300px]" : "max-h-0"
                   }`}
                 >
                   <p className="p-6 text-gray-400 text-sm leading-relaxed">
