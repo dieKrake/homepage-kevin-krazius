@@ -6,6 +6,7 @@ import { motion } from "motion/react";
 import { sendEmail } from "@/actions/sendEmail";
 import ContactSubmitButton from "./contact-submit-button";
 import toast from "react-hot-toast";
+import { usePathname } from "next/navigation";
 import {
   FaPhone,
   FaEnvelope,
@@ -15,6 +16,13 @@ import {
 } from "react-icons/fa";
 
 export default function Contact() {
+  const pathname = usePathname();
+  const isLegalPage = ["/agb", "/datenschutz", "/impressum"].includes(pathname);
+
+  if (isLegalPage) {
+    return null;
+  }
+
   const contactInfo = [
     {
       icon: <FaPhone className="text-blue-500" />,
