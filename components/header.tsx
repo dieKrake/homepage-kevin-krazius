@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { BsBorderWidth, BsWhatsapp } from "react-icons/bs";
 import Image from "next/image";
@@ -11,137 +11,144 @@ import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <header className="z-[999] relative">
-      {/* Background and structure */}
+      {/* Navbar Container */}
       <motion.div
-        className="fixed top-0 left-1/2 h-[5.7rem] w-full rounded-none border border-opacity-40 shadow-black/[0.03] backdrop-blur-[0.5rem] bg-gray-950 border-black/40 bg-opacity-90"
+        className={clsx(
+          "fixed top-0 left-1/2 -translate-x-1/2 w-full h-[5rem] transition-all duration-300 border-b",
+          scrolled
+            ? "bg-gray-950/80 backdrop-blur-lg border-white/10 h-[4.5rem]"
+            : "bg-transparent border-transparent",
+        )}
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
-      ></motion.div>
+      />
 
-      <nav className="flex fixed top-[1.5rem] left-1/2 h-12 w-full -translate-x-1/2 py-2 custom-sm:top-[0.7rem] custom-sm:h-[initial] custom-sm:py-0 max-w-screen-2xl">
+      <nav className="flex fixed top-0 left-1/2 h-[5rem] w-full -translate-x-1/2 px-4 sm:px-8 max-w-screen-2xl items-center justify-between transition-all duration-300">
+        {/* Company Logo */}
         <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
           className="flex items-center"
-          initial={{ y: 0, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
         >
-          {/* Company Logo */}
-          <motion.div className="flex items-center custom-sm:ml-4 absolute left-1/2 -translate-x-1/2 custom-sm:left-0 custom-sm:translate-x-0 custom-sm:relative">
-            <Link href="/" className="cursor-pointer">
-              <Image
-                src="/Krazius-Solutions-Logo.webp"
-                alt="Logo"
-                width={100}
-                height={100}
-                className="h-16 w-auto"
-              />
-            </Link>
-          </motion.div>
-
-          {/* BsBorderWidth Icon - visible only on small screens */}
-          <motion.div
-            initial={{ y: -100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            className="absolute ml-5 block custom-sm:hidden transform -translate-y-1/2"
-          >
-            <BsBorderWidth
-              size={32}
-              onClick={() => setMenuOpen(!menuOpen)}
-              className="cursor-pointer text-white focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition"
+          <Link href="/" className="cursor-pointer group">
+            <Image
+              src="/Krazius-Solutions-Logo.webp"
+              alt="Logo"
+              width={120}
+              height={120}
+              className="h-12 sm:h-14 w-auto group-hover:scale-105 transition-transform"
             />
-          </motion.div>
+          </Link>
+        </motion.div>
 
-          {/* Menu for small screens - animated */}
-          <AnimatePresence>
-            {menuOpen && (
-              <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 0.98, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.3 }}
-                className="absolute w-48 sm:w-[300px] ml-1 mt-36 custom-sm:hidden bg-gray-800 rounded-lg"
+        {/* Desktop Navigation */}
+        <div className="hidden custom-sm:flex items-center gap-2 bg-white/5 border border-white/10 px-2 py-1.5 rounded-full backdrop-blur-sm">
+          <ul className="flex flex-row items-center gap-1 text-[0.95rem] font-medium">
+            {links.map((link) => (
+              <li
+                key={link.hash}
+                className="relative flex items-center justify-center"
               >
-                <ul className="flex flex-col items-center justify-center gap-y-1 text-[1.3rem] font-medium text-gray-500">
-                  {links.map((link) => (
-                    <li key={link.hash}>
-                      <Link
-                        className={clsx(
-                          "flex w-full items-center justify-center px-5 py-3 transition hover:text-gray-300",
-                          {
-                            "text-white": pathname === link.hash,
-                            "text-gray-500": pathname !== link.hash,
-                          },
-                        )}
-                        href={link.hash}
-                        onClick={() => {
-                          setMenuOpen(false); // Close the menu after selecting a link
-                        }}
-                      >
-                        {link.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            )}
-          </AnimatePresence>
-
-          {/* Menu for large screens */}
-          <div className="hidden absolute custom-sm:flex left-1/2 -translate-x-1/2">
-            <ul className="flex flex-row items-center justify-center gap-5 text-[1.4rem] font-medium text-gray-500">
-              {links.map((link) => (
-                <li
-                  key={link.hash}
-                  className="relative flex items-center justify-center"
+                <Link
+                  className={clsx(
+                    "relative px-4 py-2 transition-colors duration-200 rounded-full",
+                    pathname === link.hash
+                      ? "text-white"
+                      : "text-gray-400 hover:text-gray-200",
+                  )}
+                  href={link.hash}
                 >
-                  <Link
-                    className={clsx(
-                      "flex w-full items-center justify-center px-3 py-3 transition hover:text-gray-300",
-                      {
-                        "text-white": pathname === link.hash,
-                        "text-gray-500": pathname !== link.hash,
-                      },
-                    )}
-                    href={link.hash}
-                  >
-                    {link.name}
-                    {link.hash === pathname && (
-                      <motion.span
-                        className="bg-gray-700 rounded-full absolute inset-0 -z-10"
-                        layoutId="activeSection"
-                        transition={{
-                          type: "spring",
-                          stiffness: 380,
-                          damping: 30,
-                        }}
-                      ></motion.span>
-                    )}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+                  {link.name}
+                  {link.hash === pathname && (
+                    <motion.span
+                      className="absolute inset-0 bg-white/10 rounded-full -z-10"
+                      layoutId="activeSection"
+                      transition={{
+                        type: "spring",
+                        stiffness: 380,
+                        damping: 30,
+                      }}
+                    />
+                  )}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
 
-          {/* WhatsApp Icon */}
+        {/* Right Side: CTA & Mobile Toggle */}
+        <div className="flex items-center gap-4">
+          {/* WhatsApp CTA */}
           <motion.div
-            className="absolute right-0 -top-0 custom-sm:top-2 transform -translate-y-1/2 rounded-full custom-sm:px-2 px-0"
-            initial={{ y: -100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
           >
             <a
-              className="px-[0.5rem] py-[0.5rem] flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer text-white"
-              href={"https://wa.me/1624059165"}
-              style={{ backgroundColor: "rgb(3, 7, 18)" }}
+              href="https://wa.me/1624059165"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2.5 px-4 py-2.5 sm:px-5 sm:py-3 bg-emerald-500 hover:bg-emerald-600 text-gray-950 font-bold text-sm rounded-xl transition-all shadow-lg shadow-emerald-500/10 active:scale-95"
             >
-              <h1 className="hidden min-[1240px]:block">+49 162 405 9165</h1>
-              <BsWhatsapp className="text-3xl custom-sm:text-4xl" />
+              <span className="hidden min-[1350px]:block">Kontakt</span>
+              <BsWhatsapp className="text-xl" />
             </a>
           </motion.div>
-        </motion.div>
+
+          {/* Mobile Menu Toggle */}
+          <motion.button
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="block custom-sm:hidden p-2.5 bg-white/5 border border-white/10 rounded-xl text-white hover:bg-white/10 transition-colors"
+          >
+            <BsBorderWidth size={24} />
+          </motion.button>
+        </div>
+
+        {/* Mobile Menu Dropdown */}
+        <AnimatePresence>
+          {menuOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -20, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -20, scale: 0.95 }}
+              transition={{ duration: 0.2 }}
+              className="absolute top-[5.5rem] left-4 right-4 p-4 bg-gray-900/95 backdrop-blur-xl border border-white/10 rounded-2xl custom-sm:hidden shadow-2xl z-[1000]"
+            >
+              <ul className="flex flex-col gap-1">
+                {links.map((link) => (
+                  <li key={link.hash}>
+                    <Link
+                      className={clsx(
+                        "flex w-full items-center px-5 py-4 rounded-xl transition-all",
+                        pathname === link.hash
+                          ? "bg-white/10 text-white font-semibold"
+                          : "text-gray-400 hover:bg-white/5 hover:text-white",
+                      )}
+                      href={link.hash}
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
     </header>
   );

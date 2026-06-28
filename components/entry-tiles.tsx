@@ -39,7 +39,7 @@ export default function EntryTiles() {
         "Lokale SEO-Optimierung",
         "Google Business Profil",
         "Performance-Reporting",
-        "KI-Chatbot zubuchbar",
+        "Missed-Call Automation",
       ],
       ctaText: "Paket entdecken",
       ctaHref: "/pricing",

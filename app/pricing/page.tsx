@@ -42,6 +42,7 @@ export default function PricingPage() {
         "Lokale SEO-Optimierung (Maps)",
         "Google Business Profil Anbindung",
         "Monatlicher Performance-Report",
+        "Missed-Call Automation",
         "2 Stunden Support / Monat",
       ],
       cta: "Beliebtestes Paket anfragen",
@@ -112,6 +113,10 @@ export default function PricingPage() {
     {
       q: "Was ist ein RAG KI-Chatbot und wie hilft er mir?",
       a: "RAG (Retrieval-Augmented Generation) bedeutet, dass wir den KI-Chatbot gezielt mit Ihren Unternehmensdaten (Leistungen, FAQs, Dokumente) füttern. Er antwortet dadurch absolut präzise und halluziniert nicht. Auf der Website agiert er als 24/7-Mitarbeiter, der Kunden berät, Fragen beantwortet und Kontaktdaten (Leads) für Sie einsammelt.",
+    },
+    {
+      q: "Was ist die 'Missed-Call Automation'?",
+      a: "Diese Automation sorgt dafür, dass Ihnen kein potenzieller Kunde verloren geht. Wenn Sie einen Anruf verpassen, sendet das System dem Anrufer automatisch eine freundliche SMS oder WhatsApp-Nachricht und bietet die Möglichkeit, direkt einen Termin zu vereinbaren oder eine Nachricht zu hinterlassen. Die Daten werden sofort als Lead für Sie gespeichert.",
     },
     {
       q: "Bieten Sie auch klassische Einmalzahlungen an?",
