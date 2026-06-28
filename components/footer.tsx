@@ -16,7 +16,7 @@ export default function Footer() {
             <Link href="/" className="cursor-pointer group">
               <Image
                 src="/Krazius-Solutions-Logo.webp"
-                alt="Krazius Solutions Logo"
+                alt="Krazius Solutions - Webdesign & SEO Agentur Jagstzell"
                 width={150}
                 height={150}
                 className="h-16 w-auto transition-transform group-hover:scale-105"

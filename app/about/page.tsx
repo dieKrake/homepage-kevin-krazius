@@ -86,7 +86,7 @@ export default function AboutPage() {
             <div className="relative w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] rounded-3xl overflow-hidden border border-white/10 p-2 bg-white/5 backdrop-blur-sm">
               <img
                 src="/images/kkrazius_bild.jpg"
-                alt="Kevin Krazius"
+                alt="Kevin Krazius - Experte für Webentwicklung und KI-Lösungen"
                 className="w-full h-full object-cover rounded-2xl hover:scale-105 transition-all duration-500"
                 style={{ objectPosition: "center 5%" }}
               />

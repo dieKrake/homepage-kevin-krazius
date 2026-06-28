@@ -48,7 +48,7 @@ export default function Header() {
             <Link href="/" className="cursor-pointer group">
               <Image
                 src="/Krazius-Solutions-Logo.webp"
-                alt="Logo"
+                alt="Krazius Solutions Logo - Webdesign & KI-Agentur"
                 width={120}
                 height={120}
                 className="h-10 sm:h-12 w-auto group-hover:scale-105 transition-transform"
