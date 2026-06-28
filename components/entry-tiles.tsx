@@ -49,7 +49,7 @@ export default function EntryTiles() {
       ],
       ctaText: "Zu den Paketen",
       ctaHref: "/pricing",
-      isPopular: true,
+      isPopular: false,
     },
     {
       title: "Rundum-Sorglos-Service",
