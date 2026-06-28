@@ -8,28 +8,28 @@ import { FaGraduationCap, FaCode, FaRobot, FaRocket } from "react-icons/fa";
 export default function AboutPage() {
   const expertise = [
     {
-      icon: <FaGraduationCap className="text-blue-500" />,
-      title: "Akademischer Fokus",
+      icon: <FaRocket className="text-blue-500" />,
+      title: "Digitale Sichtbarkeit",
       description:
-        "Bachelorarbeit mit KI-Schwerpunkt als Fundament für tiefgreifendes Verständnis moderner Sprachmodelle.",
+        "Ich sorge dafür, dass Ihr Unternehmen bei Google ganz oben steht. Durch gezieltes Local SEO heben wir Sie von der Konkurrenz ab und ziehen mehr Besucher an.",
     },
     {
       icon: <FaCode className="text-emerald-500" />,
-      title: "KI-Tech-Stack",
+      title: "Conversion-Websites",
       description:
-        "Spezialisierung auf RAG-Technologie, OpenAI GPT, LangChain und Vector-Datenbanken wie Pinecone.",
+        "Webseiten müssen mehr als nur gut aussehen. Ich entwickle verkaufsstarke Plattformen auf Next.js-Basis, die Besucher gezielt in Kunden verwandeln.",
     },
     {
       icon: <FaRobot className="text-amber-500" />,
-      title: "Intelligente Chatbots",
+      title: "KI-Kundengewinnung",
       description:
-        "Entwicklung von Systemen, die nicht nur antworten, sondern Ihr Unternehmenswissen aktiv nutzen.",
+        "Automatisierte Lead-Erfassung durch intelligente RAG-Chatbots, die 24/7 Anfragen beantworten, Leads qualifizieren und Termine für Sie buchen.",
     },
     {
-      icon: <FaRocket className="text-purple-500" />,
-      title: "Automatisierung",
+      icon: <FaGraduationCap className="text-purple-500" />,
+      title: "Strategisches Wachstum",
       description:
-        "Effizienzsteigerung für Kleinunternehmen durch maßgeschneiderte KI-gestützte Prozesse.",
+        "Als KI-Spezialist entwickle ich für Sie Strategien, die technologische Innovation direkt in messbaren Umsatz und Zeitersparnis übersetzen.",
     },
   ];
 
@@ -100,7 +100,7 @@ export default function AboutPage() {
         {/* Expertise Grid */}
         <section className="mb-24">
           <div className="text-center mb-16">
-            <SectionHeading>Expertise & Fokus</SectionHeading>
+            <SectionHeading>Fokus & Resultate</SectionHeading>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -136,12 +136,12 @@ export default function AboutPage() {
         >
           <h2 className="text-3xl font-bold text-white mb-8">Meine Mission</h2>
           <p className="text-gray-400 text-lg leading-relaxed max-w-4xl mx-auto italic">
-            "RAG-Technologie (Retrieval-Augmented Generation) ermöglicht es
-            Chatbots, auf Ihre spezifischen Unternehmensdaten zuzugreifen und
-            präzise, kontextbezogene Antworten zu geben. Mein Ziel ist es, diese
-            High-End-Technologie für Kleinunternehmen und Einzelunternehmer
-            erschwinglich und nutzbar zu machen, damit sie mehr Zeit für ihr
-            Kerngeschäft haben."
+            "Meine Mission ist es, Unternehmen durch die Symbiose aus
+            erstklassiger Webpräsenz und modernster KI-Technologie zu maximaler
+            Sichtbarkeit und nachhaltiger Kundengewinnung zu verhelfen. Ich
+            mache komplexe Innovationen wie RAG-Chatbots für jeden nutzbar –
+            damit Technologie nicht nur Zeit spart, sondern aktiv Ihr Wachstum
+            antreibt."
           </p>
         </motion.section>
       </div>

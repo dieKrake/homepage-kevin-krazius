@@ -50,8 +50,8 @@ export default function About() {
               </span>{" "}
               mit zukunftsweisender{" "}
               <span className="text-white font-medium">KI-Expertise</span>. Mein
-              Ziel ist es, Kleinunternehmen nicht nur eine digitale Visitenkarte
-              zu geben, sondern eine echte Wachstumsmaschine zu bauen.
+              Ziel ist es, Unternehmen nicht nur eine digitale Visitenkarte zu
+              geben, sondern eine echte Wachstumsmaschine zu bauen.
             </p>
             <p>
               Durch meinen akademischen Hintergrund im Bereich KI und meine

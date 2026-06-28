@@ -13,9 +13,9 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Krazius Solutions | Kevin Krazius",
+  title: "Krazius Solutions | Webdesign, SEO & KI-Automatisierung",
   description:
-    "Krazius Solutions bietet erstklassige KI-Chatbot-Lösungen für Kleinunternehmen.",
+    "Ihre Agentur für hochperformante Next.js Webseiten, Local SEO und intelligente KI-Chatbots. Wir steigern Ihre Online-Sichtbarkeit und gewinnen automatisiert neue Kunden.",
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
