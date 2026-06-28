@@ -9,6 +9,9 @@ import modernImage from "@/public/modern.webp";
 
 import { Testimonial } from "./types";
 
+export const bookingUrl =
+  "https://calendar.google.com/calendar/appointments/schedules/AcZssZ3xGv0rSFgHiCvjxTSMGMcZgm27Rp8lxhXmnODh3perQT7EokkjJRLw68RAPyhhB-x6VVIF2Ciq?gv=true";
+
 export const links = [
   {
     name: "Startseite",

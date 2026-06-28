@@ -10,6 +10,7 @@ import CookieBanner from "@/components/cookie-banner";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import LocalBusinessJSONLD from "@/components/local-business-json-ld";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -53,9 +54,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="de" className="!scroll-smooth">
+      <head>
+        <link
+          href="https://calendar.google.com/calendar/scheduling-button/index.css"
+          rel="stylesheet"
+        />
+      </head>
       <body
         className={`${inter.className} relative pt-[4.5rem] bg-gray-950 text-gray-50 text-opacity-90 overflow-x-hidden`}
       >
+        <Script
+          src="https://calendar.google.com/calendar/scheduling-button/index.js"
+          strategy="lazyOnload"
+        />
         <LocalBusinessJSONLD />
         <CookieProvider>
           <ScrollToTop />

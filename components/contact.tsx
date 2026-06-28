@@ -1,18 +1,20 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "motion/react";
 import { sendEmail } from "@/actions/sendEmail";
 import ContactSubmitButton from "./contact-submit-button";
 import toast from "react-hot-toast";
 import { usePathname } from "next/navigation";
+import { bookingUrl } from "@/lib/data";
 import {
   FaPhone,
   FaEnvelope,
   FaMapMarkerAlt,
   FaClock,
   FaWhatsapp,
+  FaCalendarAlt,
 } from "react-icons/fa";
 
 export default function Contact() {
@@ -72,10 +74,10 @@ export default function Contact() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start lg:items-stretch">
         {/* Links: Kontakt-Informationen */}
-        <div className="flex flex-col gap-6">
-          <div className="p-8 rounded-2xl border border-white/10 bg-white/[0.02] flex flex-col gap-8">
+        <div className="flex flex-col gap-6 h-full">
+          <div className="p-8 rounded-2xl border border-white/10 bg-white/[0.02] flex flex-col gap-8 h-full">
             <h3 className="text-2xl font-bold text-white mb-2">
               Direkter Kontakt
             </h3>
@@ -103,18 +105,41 @@ export default function Contact() {
                   </div>
                 </div>
               ))}
+
+              {/* Termin buchen Button */}
+              <button
+                onClick={() => {
+                  if (
+                    typeof window !== "undefined" &&
+                    (window as any).calendar
+                  ) {
+                    (window as any).calendar.schedulingButton.load({
+                      url: bookingUrl,
+                      color: "#2563eb",
+                      label: "Termin online buchen",
+                    });
+                  } else {
+                    // Fallback falls Skript noch nicht geladen
+                    window.open(bookingUrl, "_blank");
+                  }
+                }}
+                className="mt-4 flex items-center justify-center gap-3 w-full py-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-blue-900/20 group"
+              >
+                <FaCalendarAlt className="text-xl group-hover:rotate-12 transition-transform" />
+                Termin online buchen
+              </button>
             </div>
           </div>
         </div>
 
         {/* Rechts: Kontaktformular */}
-        <div className="p-8 rounded-2xl border border-white/10 bg-white/[0.02]">
+        <div className="p-8 rounded-2xl border border-white/10 bg-white/[0.02] h-full flex flex-col">
           <h3 className="text-2xl font-bold text-white mb-8">
             Schreiben Sie uns
           </h3>
 
           <form
-            className="flex flex-col gap-4"
+            className="flex flex-col gap-4 flex-1"
             action={async (formData) => {
               const { data, error } = await sendEmail(formData);
 
