@@ -34,9 +34,9 @@ export default function AboutPage() {
   ];
 
   return (
-    <main className="flex flex-col items-center px-4 pt-32 pb-20 bg-gray-950 min-h-screen overflow-x-hidden">
+    <main className="relative flex flex-col items-center px-4 pt-32 pb-20 bg-gray-950 min-h-screen overflow-x-hidden">
       {/* Background Decor */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-[1200px] pointer-events-none -z-10">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-[1200px] pointer-events-none -z-10 overflow-hidden">
         <div className="absolute top-[10%] left-[-20%] w-[50%] h-[50%] bg-blue-600/5 rounded-full blur-[120px]" />
         <div className="absolute top-[40%] right-[-10%] w-[40%] h-[40%] bg-purple-600/5 rounded-full blur-[120px]" />
       </div>
@@ -51,9 +51,9 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
           >
             <span className="text-blue-500 font-semibold tracking-widest uppercase text-sm mb-4 block">
-              Über uns
+              Geschäftsführer
             </span>
-            <h1 className="text-5xl sm:text-6xl font-bold text-white mb-8 leading-tight">
+            <h1 className="text-4xl sm:text-5xl font-bold text-white mb-8 leading-tight">
               Kevin Krazius
             </h1>
             <p className="text-gray-400 text-lg leading-relaxed mb-6">
@@ -87,7 +87,7 @@ export default function AboutPage() {
               <img
                 src="/images/kkrazius_bild.jpg"
                 alt="Kevin Krazius - Experte für Webentwicklung und KI-Lösungen"
-                className="w-full h-full object-cover rounded-2xl hover:scale-105 transition-all duration-500"
+                className="w-full h-full object-cover rounded-2xl hover:scale-105 brightness-60 transition-all duration-500"
                 style={{ objectPosition: "center 5%" }}
               />
             </div>

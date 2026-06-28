@@ -3,64 +3,70 @@
 import React from "react";
 import { motion } from "motion/react";
 import Link from "next/link";
-import { FaCheck, FaCrown } from "react-icons/fa";
+import {
+  FaCheck,
+  FaCrown,
+  FaBolt,
+  FaChartLine,
+  FaShieldAlt,
+} from "react-icons/fa";
 
 export default function EntryTiles() {
   const tiles = [
     {
-      title: "Smart Start",
-      badge: "Beliebter Einstieg",
+      title: "KI-gestütztes Prototyping",
+      badge: "Warp-Geschwindigkeit",
       badgeColor: "bg-blue-500/10 text-blue-400 border-blue-500/20",
-      price: "ab 149 €",
-      period: "/ Monat",
+      icon: FaBolt,
+      iconBgColor: "bg-blue-500/10",
+      iconColor: "text-blue-400",
       description:
-        "Perfekt für Kleinstunternehmer und Gründer. Alles für einen professionellen & rechtssicheren Start.",
+        "Durch modernste KI-gestützte Entwicklungsprozesse bringen wir Ihre Website in Rekordzeit online. Erste Prototypen sehen Sie oft schon nach Tagen statt Wochen.",
       features: [
-        "1-Page Landing Page",
-        "Full Service Hosting",
-        "DSGVO-Sicherheit",
-        "Basis SEO Optimierung",
-        "1 Std. Support inklusive",
+        "Live-Prototypen in Rekordzeit",
+        "Anpassungen in Echtzeit",
+        "Kürzere Entwicklungszyklen",
+        "Zukunftssichere Next.js-Technologie",
       ],
-      ctaText: "Details ansehen",
+      ctaText: "Ablauf ansehen",
       ctaHref: "/pricing",
       isPopular: false,
     },
     {
-      title: "Business Growth",
-      badge: "Bester ROI",
+      title: "Maximale Sichtbarkeit",
+      badge: "Google Top-Rankings",
       badgeColor: "bg-amber-500/10 text-amber-400 border-amber-500/20",
-      price: "ab 249 €",
-      period: "/ Monat",
+      icon: FaChartLine,
+      iconBgColor: "bg-amber-500/10",
+      iconColor: "text-amber-400",
       description:
-        "Unsere Komplettlösung für wachsende Betriebe. Volle Sichtbarkeit bei Google und Maps.",
+        "Eine schöne Website nützt nichts, wenn sie nicht gefunden wird. Wir optimieren Ihren Auftritt von Grund auf für Google-Suchergebnisse und lokale Suchen.",
       features: [
-        "Multi-Page (bis 5 Seiten)",
-        "Lokale SEO-Optimierung",
-        "Google Business Profil",
-        "Performance-Reporting",
-        "Missed-Call Automation",
+        "Lokale SEO-Dominanz (Google Maps)",
+        "Technische OnPage-Optimierung",
+        "Optimiert für blitzschnelle Ladezeiten",
+        "Google Business Profile Integration",
       ],
-      ctaText: "Paket entdecken",
+      ctaText: "Zu den Paketen",
       ctaHref: "/pricing",
       isPopular: true,
     },
     {
-      title: "Premium Scale",
-      badge: "Max. Performance",
+      title: "Rundum-Sorglos-Service",
+      badge: "100% Sorgenfrei",
       badgeColor: "bg-purple-500/10 text-purple-400 border-purple-500/20",
-      price: "ab 349 €",
-      period: "/ Monat",
+      icon: FaShieldAlt,
+      iconBgColor: "bg-purple-500/10",
+      iconColor: "text-purple-400",
       description:
-        "Für etablierte Unternehmen mit hohem Anspruch. Unbegrenzte Seiten und priorisierter Support.",
+        "Keine Wartungssorgen, kein Hosting-Stress. Wir übernehmen Updates, Backups, Sicherheit und Support, damit Sie sich voll auf Ihr Geschäft konzentrieren können.",
       features: [
-        "Unbegrenzte Seitenanzahl",
-        "Priorisierter Support (5 Std.)",
-        "Erweitertes SEO & Content",
-        "Persönlicher Ansprechpartner",
-        "Full-Service Wartung",
+        "Premium-Hosting & SSL inklusive",
+        "Regelmäßige Sicherheits-Updates",
+        "Automatische Backups & Monitoring",
+        "Inkludierte monatliche Support-Stunden",
       ],
-      ctaText: "Premium-Lösung",
+      ctaText: "Service entdecken",
       ctaHref: "/pricing",
       isPopular: false,
     },
@@ -75,7 +81,7 @@ export default function EntryTiles() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          Wählen Sie Ihren Weg zum digitalen Erfolg
+          Ihre Erfolgsfaktoren für eine starke Website
         </motion.h2>
         <motion.p
           className="text-gray-400 max-w-2xl mx-auto"
@@ -84,9 +90,9 @@ export default function EntryTiles() {
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
         >
-          Egal ob flexibler monatlicher Rundum-Service oder klassische
-          Einmalinvestition — wir haben das passende Modell für Ihre
-          Wachstumsziele.
+          Wir bauen nicht nur schöne Seiten. Wir kombinieren modernste
+          Technologie, zielgerichtete Sichtbarkeit und sorgenfreie Betreuung zu
+          einem echten Wachstumsmotor für Ihr Business.
         </motion.p>
       </div>
 
@@ -113,28 +119,24 @@ export default function EntryTiles() {
 
             <div>
               {/* Card Header */}
-              <div className="flex justify-between items-center mb-4">
+              <div className="flex justify-between items-center mb-6">
                 <span
                   className={`text-[10px] sm:text-xs font-semibold px-2.5 py-1 rounded-full border ${tile.badgeColor}`}
                 >
                   {tile.badge}
                 </span>
+                <div
+                  className={`p-2.5 rounded-xl ${tile.iconBgColor} text-lg flex items-center justify-center`}
+                >
+                  <tile.icon className={`${tile.iconColor}`} size={18} />
+                </div>
               </div>
 
-              <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-3">
                 {tile.title}
               </h3>
 
-              <div className="flex items-baseline mb-4">
-                <span className="text-3xl sm:text-4xl font-extrabold text-white">
-                  {tile.price}
-                </span>
-                <span className="text-gray-400 text-sm ml-1">
-                  {tile.period}
-                </span>
-              </div>
-
-              <p className="text-gray-400 text-sm mb-6 leading-relaxed min-h-[4rem]">
+              <p className="text-gray-400 text-sm mb-6 leading-relaxed min-h-[5rem]">
                 {tile.description}
               </p>
 

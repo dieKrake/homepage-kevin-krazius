@@ -38,7 +38,7 @@ export default function Header() {
       />
 
       <nav className="fixed top-0 left-0 w-full h-[5rem] px-4 sm:px-8 flex items-center justify-center transition-all duration-300 z-[999]">
-        <div className="w-full max-w-screen-2xl flex items-center justify-between">
+        <div className="w-full max-w-screen-2xl flex items-center justify-between relative">
           {/* Company Logo */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -57,7 +57,7 @@ export default function Header() {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden custom-sm:flex items-center gap-2 bg-white/5 border border-white/10 px-2 py-1.5 rounded-full backdrop-blur-sm">
+          <div className="hidden custom-sm:flex items-center gap-2 bg-white/5 border border-white/10 px-2 py-1.5 rounded-full backdrop-blur-sm absolute left-1/2 -translate-x-1/2">
             <ul className="flex flex-row items-center gap-1 text-[0.95rem] font-medium">
               {links.map((link) => (
                 <li
