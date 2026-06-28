@@ -18,8 +18,8 @@ export const links = [
     hash: "/",
   },
   {
-    name: "Websites",
-    hash: "/websites",
+    name: "Lösungen",
+    hash: "/solutions",
   },
   {
     name: "Preise",
