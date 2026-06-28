@@ -7,6 +7,8 @@ import uiImage from "@/public/ui.webp";
 import devicesImage from "@/public/devices.webp";
 import modernImage from "@/public/modern.webp";
 
+import { Testimonial } from "./types";
+
 export const links = [
   {
     name: "Startseite",
@@ -89,3 +91,29 @@ export const skillsData = [
   "Tailwind",
   "Framer Motion",
 ] as const;
+
+export const testimonialsData: Testimonial[] = [
+  {
+    name: "Michael W.",
+    role: "Einzelunternehmer",
+    review:
+      "Durch die Website-Miete von Krazius Solutions hatten wir keinerlei hohe Einstiegskosten und sind direkt professionell online gegangen. Schon nach drei Monaten haben wir über Google spürbar mehr qualifizierte Anfragen erhalten. Der Rundum-Service spart uns jede Woche kostbare Zeit!",
+    stars: 5,
+    link: "https://www.google.com/",
+  },
+  {
+    name: "Dr. med. dent. Sabina S.",
+    role: "Zahnärztin",
+    review:
+      "Der integrierte RAG KI-Chatbot ist ein absoluter Segen für unser Team. Er beantwortet über 80% der wiederkehrenden Fragen zu Leistungen, Abläufen und Notdiensten vollautomatisch — selbst am Wochenende — und sammelt zuverlässig Kontaktdaten ein. Ein echter Gamechanger!",
+    stars: 5,
+  },
+  {
+    name: "Razvan P.",
+    role: "Kochschulenbetreiber",
+    review:
+      "Unsere veraltete WordPress-Seite wurde durch eine pfeilschnelle Next.js-Website ersetzt. Die Ladezeit ist phänomenal und unsere Google-Rankings in der Region haben sich drastisch verbessert. Die laufende SEO-Pflege im Monatsabo funktioniert absolut reibungslos.",
+    stars: 5,
+    link: "https://www.google.com/",
+  },
+];
