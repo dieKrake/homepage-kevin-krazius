@@ -20,7 +20,7 @@ export default function Services() {
         className="w-full flex justify-center mt-4"
       >
         <SectionHeading>
-          KI-Chatbot Lösungen für Kleinunternehmen
+          Unsere Leistungen für Ihren digitalen Erfolg
         </SectionHeading>
       </motion.div>
 
@@ -31,26 +31,23 @@ export default function Services() {
         transition={{ delay: 0.175 }}
       >
         <p className="mb-3">
-          Als KI-Spezialist entwickle ich intelligente Chatbot-Lösungen mit
-          <span className="font-medium"> RAG-Technologie</span>, die perfekt auf
-          die Bedürfnisse von Kleinunternehmen abgestimmt sind. Ich helfe Ihnen,
-          Ihre Kundenbetreuung zu automatisieren und durch moderne{" "}
-          <span className="font-medium">KI-Technologien</span> und{" "}
-          <span className="font-medium">maschinelles Lernen</span> zu
-          optimieren. Von der einfachen FAQ-Automatisierung bis hin zu
-          komplexen, branchenspezifischen Beratungs-Chatbots – ich biete Ihnen
-          maßgeschneiderte Lösungen für 24/7 Kundenservice.
+          Bei Krazius Solutions kombinieren wir moderne, hochperformante{" "}
+          <span className="font-medium">Next.js Webentwicklung</span> mit
+          effektiver{" "}
+          <span className="font-medium">Suchmaschinenoptimierung (SEO)</span>{" "}
+          und intelligenten{" "}
+          <span className="font-medium">RAG KI-Chatbot-Lösungen</span>. Unser
+          Ziel ist es, Ihrem Betrieb einen erstklassigen Online-Auftritt zu
+          verschaffen, der aktiv Neukunden gewinnt und Ihre internen Prozesse
+          spürbar entlastet.
         </p>
 
         <p>
-          <span className="italic">
-            Wenn ich nicht gerade Chatbots entwickle
-          </span>
-          , beschäftige ich mich mit den neuesten KI-Entwicklungen und
-          verbessere kontinuierlich meine Expertise in maschinellem Lernen. Ich
-          arbeite stets daran, meine Kunden durch intelligente Automatisierung
-          und effiziente KI-Lösungen zu unterstützen. Lassen Sie uns gemeinsam
-          Ihre Kundenbetreuung revolutionieren!
+          Ob Sie eine komplett neue Website benötigen, Ihren bestehenden
+          Webauftritt grundlegend überarbeiten wollen oder durch automatisierte
+          KI-Assistenten Zeit einsparen möchten — wir bieten Ihnen
+          maßgeschneiderte, transparente Lösungen zum monatlichen Festpreis
+          (Website-Miete) oder als klassisches Projektgeschäft.
         </p>
       </motion.section>
 
@@ -69,10 +66,10 @@ export default function Services() {
         className="flex justify-center"
       >
         <Link
-          href="/chatbots"
+          href="/pricing"
           className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition border border-white/10"
         >
-          Alle Chatbot-Lösungen ansehen
+          Unsere Preismodelle entdecken
         </Link>
       </motion.div>
     </section>

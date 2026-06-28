@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "motion/react";
 import { HeroBackground, Highlight } from "./hero-background";
+import Link from "next/link";
 
 export function Hero() {
   return (
@@ -26,9 +27,9 @@ export function Hero() {
           }}
           className="text-4xl px-4 md:text-5xl lg:text-6xl font-bold text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto mt-0 sm:mt-10"
         >
-          KI-Chatbots für
+          Mehr Kunden durch
           <br />
-          <Highlight className="text-white">Kleinunternehmen</Highlight>
+          <Highlight className="text-white">Online-Auftritt & SEO</Highlight>
         </motion.h1>
 
         <motion.p
@@ -37,13 +38,15 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
         >
-          24/7 Kundenbetreuung • Automatisierte Anfragen • Personalisierte
-          Beratung
+          Wir erstellen & betreuen Ihre hochperformante Next.js Website
+          inklusive professioneller SEO-Optimierung.
           <br />
-          Intelligente Chatbot-Lösungen für mehr Effizienz in Ihrem Unternehmen.
+          Wahlweise als monatliches All-Inclusive-Abo ab 149€ oder als
+          klassischer Kauf — auf Wunsch erweitert mit intelligenten 24/7
+          KI-Chatbots für vollautomatische Kundengewinnung.
         </motion.p>
 
-        <div className="flex mt-8 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center items-center">
           <button
             className="group flex text-sm sm:text-base items-center justify-center px-6 py-3 sm:px-12 sm:py-4 rounded-lg border-2 transition-all duration-300 text-black hover:text-gray-950 bg-white hover:bg-gray-50 border-none md:hover:scale-105"
             style={{
@@ -57,8 +60,18 @@ export function Hero() {
               }
             }}
           >
-            Kostenlose Chatbot-Demo sichern
+            Kostenloses Erstgespräch
           </button>
+          <Link
+            href="/pricing"
+            className="group flex text-sm sm:text-base items-center justify-center px-6 py-3 sm:px-12 sm:py-4 rounded-lg border-2 border-white/20 transition-all duration-300 text-white hover:text-gray-200 bg-transparent hover:bg-white/5 md:hover:scale-105"
+            style={{
+              opacity: 0,
+              animation: "fadeIn 0.9s ease-out 0.8s forwards",
+            }}
+          >
+            Preismodelle ansehen
+          </Link>
         </div>
       </HeroBackground>
 

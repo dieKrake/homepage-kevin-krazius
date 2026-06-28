@@ -2,6 +2,7 @@ import Header from "@/components/header";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Footer from "@/components/footer";
+import Contact from "@/components/contact";
 import { Toaster } from "react-hot-toast";
 import ScrollToTop from "@/components/scroll-to-top";
 import CookieProvider from "@/context/cookie-context";
@@ -37,6 +38,9 @@ export default function RootLayout({
 
           <Header />
           {children}
+          <div className="flex flex-col items-center px-4 sm:px-0">
+            <Contact />
+          </div>
           <Footer />
 
           <Toaster position="top-right" />

@@ -1,18 +1,18 @@
 import { Hero } from "@/components/hero";
-import About from "@/components/about";
-import Contact from "@/components/contact";
+import EntryTiles from "@/components/entry-tiles";
+import Catchphrase from "@/components/catchphrase";
 import Services from "@/components/services";
-import WebsitesTeaser from "@/components/websites-teaser";
+import Testimonials from "@/components/testimonials";
 
 export default function Home() {
   return (
     <main className="flex flex-col items-center">
       <Hero />
-      <div className="flex flex-col items-center px-4 sm:px-0">
+      <EntryTiles />
+      <Catchphrase />
+      <div className="flex flex-col items-center px-4 sm:px-0 mt-20">
         <Services />
-        <WebsitesTeaser />
-        <About />
-        <Contact />
+        <Testimonials />
       </div>
     </main>
   );

@@ -34,31 +34,36 @@ export const links = [
 
 export const servicesData = [
   {
-    title: "Intelligente Kundenbetreuung",
+    title: "High-Performance Webseiten",
     description:
-      "RAG-basierte Chatbots für präzise Antworten auf Kundenfragen. 24/7 Verfügbarkeit mit Integration in Ihre bestehende Website.",
-    tags: ["RAG-Technologie", "24/7 Support", "Website Integration"],
+      "Maßgeschneiderte, pfeilschnelle Next.js-Websites mit perfektem Design. Voll optimiert für mobile Geräte und schnelle Ladezeiten für maximale Benutzererfahrung.",
+    tags: ["Next.js", "React", "Mobile First", "Blitzschnell"],
     imageUrl: digitalImage,
   },
   {
-    title: "Branchenspezifische Lösungen",
+    title: "Suchmaschinenoptimierung (SEO)",
     description:
-      "Anpassung an Ihre Fachterminologie und Schulung mit Unternehmensdaten.",
-    tags: ["Fachterminologie", "Unternehmensdaten"],
+      "Top-Rankings bei Google für relevante lokale Keywords. Optimierung Ihres Google Business Profils, damit Kunden in Ihrer Region Sie sofort finden.",
+    tags: ["Local SEO", "Google Maps", "Keywords", "Sichtbarkeit"],
     imageUrl: devicesImage,
   },
   {
-    title: "Nahtlose Integration",
+    title: "RAG KI-Chatbots & Automation",
     description:
-      "Verbindung zu WhatsApp, Website und Social Media Kanälen. CRM-Anbindung möglich mit einfacher, zentraler Verwaltung.",
-    tags: ["WhatsApp", "Social Media", "CRM-Integration"],
+      "Rund um die Uhr Kundenanfragen beantworten und Leads erfassen. Automatisierter Support, maßgeschneidert auf Ihr Firmenwissen, mit optionaler WhatsApp-Anbindung.",
+    tags: ["RAG-Technologie", "24/7 Lead-Erfassung", "Support", "WhatsApp"],
     imageUrl: modernImage,
   },
   {
-    title: "Kontinuierliche Optimierung",
+    title: "Rundum-Sorglos-Betreuung",
     description:
-      "Lernende Systeme mit Performance-Monitoring und regelmäßigen Updates. Ihr Chatbot wird kontinuierlich intelligenter.",
-    tags: ["Machine Learning", "Performance-Monitoring"],
+      "Sicheres Hosting, laufende Updates, Backups und DSGVO-konforme Pflege. Wir übernehmen die Technik, damit Sie sich voll auf Ihr Geschäft konzentrieren können.",
+    tags: [
+      "Hosting & SSL",
+      "DSGVO-Konformität",
+      "Regelmäßige Backups",
+      "Wartung",
+    ],
     imageUrl: uiImage,
   },
 ] as const;
