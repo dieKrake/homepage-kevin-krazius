@@ -48,24 +48,51 @@ export default function PricingPage() {
       isPopular: true,
     },
     {
-      title: "Premium KI-Success",
-      subtitle: "Automatisierter Erfolg",
-      price: "399 €",
+      title: "Premium Scale",
+      subtitle: "Maximale Performance",
+      price: "349 €",
       period: "/ Monat",
       description:
-        "Kombiniert eine erstklassige Website mit einem intelligenten RAG KI-Chatbot, der rund um die Uhr Anfragen beantwortet und Leads erfasst.",
+        "Die Rundum-Sorglos-Lösung für etablierte Unternehmen mit hohem Anspruch an Design, Content und Support.",
       features: [
-        "Alles aus Business Growth",
-        "RAG-basierter KI-Chatbot",
-        "Geschult auf Ihre Firmendaten",
-        "Automatisierte Lead-Erfassung",
-        "Laufendes Chatbot-Finetuning",
-        "WhatsApp Business Schnittstelle",
-        "Monatliche KI-Auswertungen",
-        "Priorisierter Support (3 Std.)",
+        "Individuelles Design & Strategie",
+        "Unbegrenzte Seitenanzahl",
+        "Premium Hosting & High-Speed SSL",
+        "Erweitertes SEO & Content-Plan",
+        "Wöchentliche Backups & Monitoring",
+        "DSGVO-Full-Service & Rechtsschutz",
+        "Priorisierter Support (5 Std.)",
+        "Persönlicher Ansprechpartner",
       ],
-      cta: "Premium-Paket anfragen",
+      cta: "Premium-Lösung anfragen",
       isPopular: false,
+    },
+  ];
+
+  const addons = [
+    {
+      title: "RAG KI-Chatbot",
+      price: "ab 99 €",
+      period: "/ Monat",
+      description:
+        "Intelligenter 24/7 Support-Assistent, geschult auf Ihren Firmendaten. Inklusive Lead-Erfassung und WhatsApp-Anbindung.",
+      setup: "+ 990 € einmaliges Setup",
+    },
+    {
+      title: "Local SEO Pro",
+      price: "99 €",
+      period: "/ Monat",
+      description:
+        "Aktive monatliche Optimierung Ihrer lokalen Sichtbarkeit, Google Maps Pflege und Linkaufbau.",
+      setup: "Keine Setup-Gebühr",
+    },
+    {
+      title: "Content & Blog",
+      price: "ab 199 €",
+      period: "/ Monat",
+      description:
+        "Professionelle monatliche Blogartikel oder News-Beiträge zur Steigerung der organischen Reichweite.",
+      setup: "Individuell",
     },
   ];
 
@@ -178,6 +205,37 @@ export default function PricingPage() {
               </button>
             </div>
           ))}
+        </div>
+
+        {/* Zusatzoptionen Section */}
+        <div className="w-full mb-24">
+          <h3 className="text-2xl sm:text-3xl font-bold text-white text-center mb-12">
+            Optionale Zusatzleistungen
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {addons.map((addon, index) => (
+              <div
+                key={index}
+                className="p-6 rounded-xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] transition-all"
+              >
+                <h4 className="text-lg font-bold text-white mb-2">
+                  {addon.title}
+                </h4>
+                <div className="flex items-baseline gap-1 mb-2">
+                  <span className="text-xl font-bold text-white">
+                    {addon.price}
+                  </span>
+                  <span className="text-gray-500 text-xs">{addon.period}</span>
+                </div>
+                <p className="text-gray-400 text-xs mb-4 leading-relaxed">
+                  {addon.description}
+                </p>
+                <div className="text-[10px] font-medium text-blue-400 uppercase tracking-wider bg-blue-500/5 px-2 py-1 rounded border border-blue-500/10 inline-block">
+                  {addon.setup}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Einmalkauf Box */}

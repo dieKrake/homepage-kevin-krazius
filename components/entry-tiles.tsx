@@ -8,65 +8,68 @@ import { FaCheck, FaCrown } from "react-icons/fa";
 export default function EntryTiles() {
   const tiles = [
     {
-      title: "Website-Miete",
+      title: "Smart Start",
       badge: "Beliebter Einstieg",
       badgeColor: "bg-blue-500/10 text-blue-400 border-blue-500/20",
       price: "ab 149 €",
       period: "/ Monat",
-      description: "Keine hohen Setup-Kosten. Voller Service inkl. Hosting, DSGVO-Konformität und laufenden Updates.",
+      description:
+        "Perfekt für Kleinstunternehmer und Gründer. Alles für einen professionellen & rechtssicheren Start.",
       features: [
-        "0 € Setup-Kosten",
-        "Modernes responsive Design",
-        "Premium Hosting & SSL-Zertifikat",
-        "Basis SEO & Google-Anmeldung",
-        "1 Stunde Textpflege monatlich"
+        "1-Page Landing Page",
+        "Full Service Hosting",
+        "DSGVO-Sicherheit",
+        "Basis SEO Optimierung",
+        "1 Std. Support inklusive",
       ],
-      ctaText: "Abo-Details ansehen",
+      ctaText: "Details ansehen",
       ctaHref: "/pricing",
       isPopular: false,
     },
     {
-      title: "Premium KI-Success",
+      title: "Business Growth",
       badge: "Bester ROI",
       badgeColor: "bg-amber-500/10 text-amber-400 border-amber-500/20",
-      price: "ab 399 €",
+      price: "ab 249 €",
       period: "/ Monat",
-      description: "Das ultimative Wachstumsmodell. Professionelle Next.js Website gebündelt mit RAG KI-Chatbot zur automatischen Kundengewinnung.",
+      description:
+        "Unsere Komplettlösung für wachsende Betriebe. Volle Sichtbarkeit bei Google und Maps.",
       features: [
-        "Inkl. vollständiger Website",
-        "Lokale SEO-Optimierung (Maps)",
-        "24/7 KI-Support-Chatbot",
-        "Automatisierte Lead-Erfassung",
-        "Laufendes Chatbot-Finetuning"
+        "Multi-Page (bis 5 Seiten)",
+        "Lokale SEO-Optimierung",
+        "Google Business Profil",
+        "Performance-Reporting",
+        "KI-Chatbot zubuchbar",
       ],
-      ctaText: "KI-Duo entdecken",
+      ctaText: "Paket entdecken",
       ctaHref: "/pricing",
       isPopular: true,
     },
     {
-      title: "Einmaliger Kauf",
-      badge: "Maximale Unabhängigkeit",
-      badgeColor: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
-      price: "ab 1.990 €",
-      period: "einmalig",
-      description: "Volles Eigentum an der Website ab Tag 1. Ideal für Unternehmen mit vorhandenem Budget und eigenem Server.",
+      title: "Premium Scale",
+      badge: "Max. Performance",
+      badgeColor: "bg-purple-500/10 text-purple-400 border-purple-500/20",
+      price: "ab 349 €",
+      period: "/ Monat",
+      description:
+        "Für etablierte Unternehmen mit hohem Anspruch. Unbegrenzte Seiten und priorisierter Support.",
       features: [
-        "Einmalige Investition",
-        "Volle Eigentumsrechte am Code",
-        "Professionelles SEO-Setup",
-        "Optimiert für Google PageSpeed",
-        "Optionale Wartung ab 49€/Monat"
+        "Unbegrenzte Seitenanzahl",
+        "Priorisierter Support (5 Std.)",
+        "Erweitertes SEO & Content",
+        "Persönlicher Ansprechpartner",
+        "Full-Service Wartung",
       ],
-      ctaText: "Projekt anfragen",
-      ctaHref: "#contact",
+      ctaText: "Premium-Lösung",
+      ctaHref: "/pricing",
       isPopular: false,
-    }
+    },
   ];
 
   return (
     <section className="scroll-mt-28 py-16 w-full max-w-[72rem] px-4 mx-auto">
       <div className="text-center mb-12">
-        <motion.h2 
+        <motion.h2
           className="text-3xl font-semibold text-white mb-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -74,14 +77,16 @@ export default function EntryTiles() {
         >
           Wählen Sie Ihren Weg zum digitalen Erfolg
         </motion.h2>
-        <motion.p 
+        <motion.p
           className="text-gray-400 max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
         >
-          Egal ob flexibler monatlicher Rundum-Service oder klassische Einmalinvestition — wir haben das passende Modell für Ihre Wachstumsziele.
+          Egal ob flexibler monatlicher Rundum-Service oder klassische
+          Einmalinvestition — wir haben das passende Modell für Ihre
+          Wachstumsziele.
         </motion.p>
       </div>
 
@@ -90,8 +95,8 @@ export default function EntryTiles() {
           <motion.div
             key={index}
             className={`relative flex flex-col justify-between p-8 rounded-2xl border transition-all duration-300 ${
-              tile.isPopular 
-                ? "bg-white/[0.07] border-amber-500/40 shadow-[0_0_30px_rgba(245,158,11,0.15)] md:scale-105 z-10" 
+              tile.isPopular
+                ? "bg-white/[0.07] border-amber-500/40 shadow-[0_0_30px_rgba(245,158,11,0.15)] md:scale-105 z-10"
                 : "bg-white/[0.03] border-white/10 hover:border-white/20"
             }`}
             initial={{ opacity: 0, y: 50 }}
@@ -109,16 +114,24 @@ export default function EntryTiles() {
             <div>
               {/* Card Header */}
               <div className="flex justify-between items-center mb-4">
-                <span className={`text-[10px] sm:text-xs font-semibold px-2.5 py-1 rounded-full border ${tile.badgeColor}`}>
+                <span
+                  className={`text-[10px] sm:text-xs font-semibold px-2.5 py-1 rounded-full border ${tile.badgeColor}`}
+                >
                   {tile.badge}
                 </span>
               </div>
 
-              <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">{tile.title}</h3>
-              
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
+                {tile.title}
+              </h3>
+
               <div className="flex items-baseline mb-4">
-                <span className="text-3xl sm:text-4xl font-extrabold text-white">{tile.price}</span>
-                <span className="text-gray-400 text-sm ml-1">{tile.period}</span>
+                <span className="text-3xl sm:text-4xl font-extrabold text-white">
+                  {tile.price}
+                </span>
+                <span className="text-gray-400 text-sm ml-1">
+                  {tile.period}
+                </span>
               </div>
 
               <p className="text-gray-400 text-sm mb-6 leading-relaxed min-h-[4rem]">
@@ -128,8 +141,13 @@ export default function EntryTiles() {
               {/* Features List */}
               <ul className="space-y-3 mb-8 border-t border-white/5 pt-6">
                 {tile.features.map((feature, fIndex) => (
-                  <li key={fIndex} className="flex items-start gap-3 text-sm text-gray-300">
-                    <span className={`mt-1 flex-shrink-0 ${tile.isPopular ? "text-amber-500" : "text-blue-500"}`}>
+                  <li
+                    key={fIndex}
+                    className="flex items-start gap-3 text-sm text-gray-300"
+                  >
+                    <span
+                      className={`mt-1 flex-shrink-0 ${tile.isPopular ? "text-amber-500" : "text-blue-500"}`}
+                    >
                       <FaCheck size={12} />
                     </span>
                     <span>{feature}</span>
@@ -143,7 +161,9 @@ export default function EntryTiles() {
               {tile.ctaHref.startsWith("#") ? (
                 <button
                   onClick={() => {
-                    const target = document.getElementById(tile.ctaHref.substring(1));
+                    const target = document.getElementById(
+                      tile.ctaHref.substring(1),
+                    );
                     if (target) {
                       target.scrollIntoView({ behavior: "smooth" });
                     }
