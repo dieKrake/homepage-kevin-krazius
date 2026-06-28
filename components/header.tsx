@@ -14,9 +14,6 @@ export default function Header() {
 
   const pathname = usePathname();
 
-  const hideLinksOnPaths = ["/impressum", "/agb"];
-  const shouldShowLinks = !hideLinksOnPaths.includes(pathname);
-
   return (
     <header className="z-[999] relative">
       {/* Background and structure */}
@@ -60,59 +57,73 @@ export default function Header() {
 
           {/* Menu for small screens - animated */}
           <AnimatePresence>
-            {menuOpen &&
-              shouldShowLinks && ( // Verstecke das Menü, wenn wir auf /impressum oder /agb sind
-                <motion.div
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 0.98, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.3 }}
-                  className="absolute w-48 sm:w-[300px] ml-1 mt-36 custom-sm:hidden bg-gray-800 rounded-lg"
-                >
-                  <ul className="flex flex-col items-center justify-center gap-y-1 text-[1.3rem] font-medium text-gray-500">
-                    {links.map((link) => (
-                      <li key={link.hash}>
-                        <Link
-                          className={clsx(
-                            "flex w-full items-center justify-center px-5 py-3 hover:text-black/90 transition text-gray-500 hover:text-gray-300",
-                            {},
-                          )}
-                          href={link.hash}
-                          onClick={() => {
-                            setMenuOpen(false); // Close the menu after selecting a link
-                          }}
-                        >
-                          {link.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              )}
+            {menuOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 0.98, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.3 }}
+                className="absolute w-48 sm:w-[300px] ml-1 mt-36 custom-sm:hidden bg-gray-800 rounded-lg"
+              >
+                <ul className="flex flex-col items-center justify-center gap-y-1 text-[1.3rem] font-medium text-gray-500">
+                  {links.map((link) => (
+                    <li key={link.hash}>
+                      <Link
+                        className={clsx(
+                          "flex w-full items-center justify-center px-5 py-3 transition hover:text-gray-300",
+                          {
+                            "text-white": pathname === link.hash,
+                            "text-gray-500": pathname !== link.hash,
+                          },
+                        )}
+                        href={link.hash}
+                        onClick={() => {
+                          setMenuOpen(false); // Close the menu after selecting a link
+                        }}
+                      >
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            )}
           </AnimatePresence>
 
           {/* Menu for large screens */}
           <div className="hidden absolute custom-sm:flex left-1/2 -translate-x-1/2">
-            {shouldShowLinks && ( // Verstecke die Links, wenn wir auf /impressum oder /agb sind
-              <ul className="flex flex-row items-center justify-center gap-5 text-[1.4rem] font-medium text-gray-500">
-                {links.map((link) => (
-                  <li
-                    key={link.hash}
-                    className="relative flex items-center justify-center"
+            <ul className="flex flex-row items-center justify-center gap-5 text-[1.4rem] font-medium text-gray-500">
+              {links.map((link) => (
+                <li
+                  key={link.hash}
+                  className="relative flex items-center justify-center"
+                >
+                  <Link
+                    className={clsx(
+                      "flex w-full items-center justify-center px-3 py-3 transition hover:text-gray-300",
+                      {
+                        "text-white": pathname === link.hash,
+                        "text-gray-500": pathname !== link.hash,
+                      },
+                    )}
+                    href={link.hash}
                   >
-                    <Link
-                      className={clsx(
-                        "flex w-full items-center justify-center px-3 py-3 transition text-gray-500 hover:text-gray-300",
-                        {},
-                      )}
-                      href={link.hash}
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            )}
+                    {link.name}
+                    {link.hash === pathname && (
+                      <motion.span
+                        className="bg-gray-700 rounded-full absolute inset-0 -z-10"
+                        layoutId="activeSection"
+                        transition={{
+                          type: "spring",
+                          stiffness: 380,
+                          damping: 30,
+                        }}
+                      ></motion.span>
+                    )}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* WhatsApp Icon */}

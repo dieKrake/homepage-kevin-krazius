@@ -5,6 +5,7 @@ import ServiceCard from "./service-card";
 import { motion } from "motion/react";
 import SectionHeading from "./section-heading";
 import React from "react";
+import Link from "next/link";
 
 export default function Services() {
   return (
@@ -53,13 +54,27 @@ export default function Services() {
         </p>
       </motion.section>
 
-      <div className="flex flex-wrap gap-x-2 gap-y-8 justify-center xl:mx-2">
+      <div className="flex flex-wrap gap-x-2 gap-y-8 justify-center xl:mx-2 mb-12">
         {servicesData.map((service, index) => (
           <React.Fragment key={index}>
             <ServiceCard {...service} />
           </React.Fragment>
         ))}
       </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3 }}
+        className="flex justify-center"
+      >
+        <Link
+          href="/chatbots"
+          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition border border-white/10"
+        >
+          Alle Chatbot-Lösungen ansehen
+        </Link>
+      </motion.div>
     </section>
   );
 }

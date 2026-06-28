@@ -9,17 +9,24 @@ import modernImage from "@/public/modern.webp";
 
 export const links = [
   {
-    name: "Leistungen",
-    hash: "#services",
+    name: "Startseite",
+    hash: "/",
   },
   {
-    name: "Über mich",
-    hash: "#about",
+    name: "Websites",
+    hash: "/websites",
   },
-
   {
-    name: "Kontakt",
-    hash: "#contact",
+    name: "Pricing",
+    hash: "/pricing",
+  },
+  {
+    name: "Chatbots",
+    hash: "/chatbots",
+  },
+  {
+    name: "Über uns",
+    hash: "/about",
   },
 ] as const;
 

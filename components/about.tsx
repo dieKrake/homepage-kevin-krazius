@@ -3,6 +3,7 @@
 import React, { useEffect } from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "motion/react";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -57,6 +58,15 @@ export default function About() {
             und Ihnen mehr Zeit für Ihr Kerngeschäft verschaffen – verständlich
             erklärt und transparent umgesetzt.
           </p>
+
+          <div className="mt-8 flex justify-start">
+            <Link
+              href="/about"
+              className="group bg-gray-900 text-white px-6 py-2 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition border border-white/10"
+            >
+              Mehr erfahren
+            </Link>
+          </div>
         </div>
         <div className="relative mx-auto md:mx-0 md:w-[320px] md:h-[320px] sm:w-[300px] sm:h-[300px] w-[255px] h-[255px] md:ml-24 opacity-90">
           <img
