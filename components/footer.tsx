@@ -15,7 +15,7 @@ export default function Footer() {
           <div className="flex flex-col gap-6">
             <Link href="/" className="cursor-pointer group">
               <Image
-                src="/Krazius-Solutions-Logo.webp"
+                src="/Krazius-Solutions-Logo_cut.png"
                 alt="Krazius Solutions - Webdesign & SEO Agentur Jagstzell"
                 width={150}
                 height={150}
