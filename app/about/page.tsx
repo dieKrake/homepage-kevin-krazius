@@ -87,7 +87,7 @@ export default function AboutPage() {
               <img
                 src="/images/kkrazius_bild.jpg"
                 alt="Kevin Krazius - Experte für Webentwicklung und KI-Lösungen"
-                className="w-full h-full object-cover rounded-2xl hover:scale-105 brightness-60 transition-all duration-500"
+                className="w-full h-full object-cover rounded-2xl hover:scale-105 brightness-75 transition-all duration-500"
                 style={{ objectPosition: "center 5%" }}
               />
             </div>
