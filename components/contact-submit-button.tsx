@@ -2,7 +2,7 @@ import React from "react";
 import { FaPaperPlane } from "react-icons/fa";
 import { useFormStatus } from "react-dom";
 
-export default function SubmitBtn() {
+export default function ContactSubmitButton() {
   const { pending } = useFormStatus();
 
   return (

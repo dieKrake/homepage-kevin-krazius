@@ -4,7 +4,7 @@ import React from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "motion/react";
 import { sendEmail } from "@/actions/sendEmail";
-import SubmitBtn from "./submit-btn";
+import ContactSubmitButton from "./contact-submit-button";
 import toast from "react-hot-toast";
 
 export default function Contact() {
@@ -84,7 +84,7 @@ export default function Contact() {
           maxLength={5000}
         />
         <div className="flex justify-center">
-          <SubmitBtn />
+          <ContactSubmitButton />
         </div>
       </form>
     </motion.section>

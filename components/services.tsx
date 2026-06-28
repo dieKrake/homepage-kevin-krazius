@@ -1,12 +1,12 @@
 "use client";
 
-import React, { useEffect } from "react";
-import SectionHeading from "./section-heading";
-import { projectsData } from "@/lib/data";
-import Project from "./project";
+import { servicesData } from "@/lib/data";
+import ServiceCard from "./service-card";
 import { motion } from "motion/react";
+import SectionHeading from "./section-heading";
+import React from "react";
 
-export default function Projects() {
+export default function Services() {
   return (
     <section
       className="scroll-mt-28 mb-28 flex flex-col items-center justify-between min-h-[40rem]"
@@ -54,9 +54,9 @@ export default function Projects() {
       </motion.section>
 
       <div className="flex flex-wrap gap-x-2 gap-y-8 justify-center xl:mx-2">
-        {projectsData.map((project, index) => (
+        {servicesData.map((service, index) => (
           <React.Fragment key={index}>
-            <Project {...project} />
+            <ServiceCard {...service} />
           </React.Fragment>
         ))}
       </div>

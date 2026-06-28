@@ -23,34 +23,9 @@ export const links = [
   },
 ] as const;
 
-export const experiencesData = [
-  {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
-    description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
-  },
-  {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
-    description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
-  },
-  {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
-    description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
-  },
-] as const;
+// Experiences and Case Studies removed during cleanup
 
-export const projectsData = [
+export const servicesData = [
   {
     title: "Intelligente Kundenbetreuung",
     description:
@@ -101,46 +76,4 @@ export const skillsData = [
   "Git",
   "Tailwind",
   "Framer Motion",
-] as const;
-
-export const caseStudiesData = [
-  {
-    title: "Handwerksbetrieb Chatbot",
-    description:
-      "Intelligenter Chatbot für einen Elektrikerbetrieb mit 24/7 Terminbuchung, Kostenvoranschlägen und technischer Beratung. Reduzierte Anrufe um 60% und steigerte Online-Anfragen um 40%.",
-    features: [
-      "Terminbuchung",
-      "Kostenvoranschläge",
-      "Technische Beratung",
-      "Notfall-Routing",
-    ],
-    industry: "Handwerk",
-    results: "60% weniger Anrufe, 40% mehr Online-Anfragen",
-  },
-  {
-    title: "FAQ-Automatisierung Steuerberater",
-    description:
-      "RAG-basierter Chatbot für Steuerberatungskanzlei mit Zugriff auf aktuelle Steuergesetze und Mandantenunterlagen. Automatisiert 80% der Standardanfragen und bietet 24/7 Erstberatung.",
-    features: [
-      "Steuerrecht-Datenbank",
-      "Mandantenportal",
-      "Dokumentenupload",
-      "Terminvereinbarung",
-    ],
-    industry: "Steuerberatung",
-    results: "80% automatisierte Anfragen, 24/7 Verfügbarkeit",
-  },
-  {
-    title: "Praxis-Terminbuchung",
-    description:
-      "Intelligentes Terminmanagement für Zahnarztpraxis mit automatischer Terminvorschlägen, Erinnerungen und Behandlungsberatung. Integriert in bestehende Praxissoftware.",
-    features: [
-      "Terminbuchung",
-      "Automatische Erinnerungen",
-      "Behandlungsberatung",
-      "Praxissoftware-Integration",
-    ],
-    industry: "Gesundheitswesen",
-    results: "50% weniger No-Shows, 30% mehr Terminauslastung",
-  },
 ] as const;

@@ -1,8 +1,8 @@
 "use client";
 import { motion } from "motion/react";
-import { HeroHighlight, Highlight } from "./hero-highlight";
+import { HeroBackground, Highlight } from "./hero-background";
 
-export function HeroHighlightDemo() {
+export function Hero() {
   return (
     <motion.div
       initial={{ opacity: 0, y: 100 }}
@@ -10,7 +10,7 @@ export function HeroHighlightDemo() {
       transition={{ delay: 0.1 }}
       className="w-full"
     >
-      <HeroHighlight>
+      <HeroBackground>
         <motion.h1
           initial={{
             opacity: 0,
@@ -60,7 +60,7 @@ export function HeroHighlightDemo() {
             Kostenlose Chatbot-Demo sichern
           </button>
         </div>
-      </HeroHighlight>
+      </HeroBackground>
 
       <style jsx>{`
         @keyframes fadeIn {

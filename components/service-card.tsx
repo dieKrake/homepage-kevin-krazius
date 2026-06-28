@@ -1,18 +1,18 @@
 "use client";
 
 import { useRef } from "react";
-import { projectsData } from "@/lib/data";
+import { servicesData } from "@/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "motion/react";
 
-type ProjectProps = (typeof projectsData)[number];
+type ServiceProps = (typeof servicesData)[number];
 
-export default function Project({
+export default function ServiceCard({
   title,
   description,
   tags,
   imageUrl,
-}: ProjectProps) {
+}: ServiceProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -48,7 +48,7 @@ export default function Project({
 
         <Image
           src={imageUrl}
-          alt="Project I worked on"
+          alt="Service I worked on"
           quality={95}
           className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl opacity-80
         transition 

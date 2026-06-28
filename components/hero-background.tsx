@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { useMotionValue, motion, useMotionTemplate } from "motion/react";
 import React from "react";
 
-export const HeroHighlight = ({
+export const HeroBackground = ({
   children,
   className,
   containerClassName,
@@ -42,7 +42,7 @@ export const HeroHighlight = ({
     <div
       className={cn(
         "group relative flex h-[24rem] sm:h-[40rem] w-full items-center justify-center bg-gray-950",
-        containerClassName
+        containerClassName,
       )}
       onMouseMove={handleMouseMove}
     >
@@ -131,7 +131,7 @@ export const Highlight = ({
       }}
       className={cn(
         `relative inline-block rounded-lg bg-gradient-to-r from-blue-500 to-blue-800 px-1 pb-1`,
-        className
+        className,
       )}
     >
       {children}
