@@ -29,7 +29,7 @@ export default function EntryTiles() {
         "Zukunftssichere Next.js-Technologie",
       ],
       ctaText: "Ablauf ansehen",
-      ctaHref: "/websites",
+      ctaHref: "/solutions",
       isPopular: false,
     },
     {
