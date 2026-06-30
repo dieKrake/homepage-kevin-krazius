@@ -102,7 +102,7 @@ export const testimonialsData: Testimonial[] = [
     review:
       "Durch die Website-Miete von Krazius Solutions hatten wir keinerlei hohe Einstiegskosten und sind direkt professionell online gegangen. Schon nach drei Monaten haben wir über Google spürbar mehr qualifizierte Anfragen erhalten. Der Rundum-Service spart uns jede Woche kostbare Zeit!",
     stars: 5,
-    link: "https://www.google.com/",
+    /*link: "https://www.google.com/",*/
   },
   {
     name: "Dr. med. dent. Sabina S.",
@@ -117,6 +117,5 @@ export const testimonialsData: Testimonial[] = [
     review:
       "Unsere veraltete WordPress-Seite wurde durch eine pfeilschnelle Next.js-Website ersetzt. Die Ladezeit ist phänomenal und unsere Google-Rankings in der Region haben sich drastisch verbessert. Die laufende SEO-Pflege im Monatsabo funktioniert absolut reibungslos.",
     stars: 5,
-    link: "https://www.google.com/",
   },
 ];
