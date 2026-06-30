@@ -30,9 +30,9 @@ export default function AGB() {
         <p>
           <strong>2. Vertragspartner:</strong> Der Dienstleistungsvertrag kommt
           zustande mit:
-          <br /> Firma: Krazius Solutions
+          <br /> Krazius Solutions (Einzelunternehmen)
+          <br /> Inhaber: Kevin Krazius
           <br /> Adresse: Hauptstraße 60, 73489 Jagstzell
-          <br /> Geschäftsführer: Kevin Krazius
           <br /> E-Mail: kevin@krazius-solutions.com
           <br /> Telefon: +49 162 405 9165
           <br /> USt-IdNr.: DE453628349

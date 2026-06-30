@@ -1,11 +1,15 @@
+"use client";
+
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import { links } from "@/lib/data";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { useCookieConsent } from "@/context/cookie-context";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const { resetConsent } = useCookieConsent();
 
   return (
     <footer className="w-full bg-gray-950 border-t border-white/5 pt-20 pb-10 px-4">
@@ -76,6 +80,14 @@ export default function Footer() {
                 >
                   Datenschutzerklärung
                 </Link>
+              </li>
+              <li>
+                <button
+                  onClick={resetConsent}
+                  className="text-gray-400 hover:text-white transition-colors text-sm text-left"
+                >
+                  Cookie-Einstellungen
+                </button>
               </li>
             </ul>
           </div>

@@ -23,9 +23,9 @@ export default function Impressum() {
       >
         <p>
           <strong>Angaben gemäß § 5 TMG:</strong>
-          <br /> Firma: Krazius Solutions
+          <br /> Krazius Solutions (Einzelunternehmen)
+          <br /> Inhaber: Kevin Krazius
           <br /> Adresse: Hauptstraße 60, 73489 Jagstzell
-          <br /> Geschäftsführer: Kevin Krazius
         </p>
 
         <p>
@@ -42,7 +42,7 @@ export default function Impressum() {
         </p>
 
         <p>
-          <strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong>
+          <strong>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</strong>
           <br /> Kevin Krazius
           <br /> Adresse: Hauptstraße 60, 73489 Jagstzell
         </p>
