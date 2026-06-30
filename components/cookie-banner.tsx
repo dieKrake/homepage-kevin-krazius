@@ -171,9 +171,8 @@ export default function CookieBanner() {
                   </button>
                 </div>
                 <p className="text-gray-400 text-sm">
-                  Werden verwendet, um Ihnen relevante Werbung zu zeigen.
-                  Aktuell verwenden wir keine Marketing-Cookies, aber diese
-                  Option ist für zukünftige Features vorbereitet.
+                  Werden verwendet, um externe Dienste wie Google Calendar zu
+                  laden und Ihnen personalisierte Funktionen zu bieten.
                 </p>
               </div>
             </div>

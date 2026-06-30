@@ -51,7 +51,7 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
           >
             <span className="text-blue-500 font-semibold tracking-widest uppercase text-sm mb-4 block">
-              Geschäftsführer
+              Inhaber
             </span>
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-8 leading-tight">
               Kevin Krazius

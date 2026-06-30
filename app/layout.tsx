@@ -7,8 +7,7 @@ import { Toaster } from "react-hot-toast";
 import ScrollToTop from "@/components/scroll-to-top";
 import CookieProvider from "@/context/cookie-context";
 import CookieBanner from "@/components/cookie-banner";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import AnalyticsWrapper from "@/components/analytics-wrapper";
 import LocalBusinessJSONLD from "@/components/local-business-json-ld";
 import Script from "next/script";
 
@@ -63,10 +62,6 @@ export default function RootLayout({
       <body
         className={`${inter.className} relative pt-[4.5rem] bg-gray-950 text-gray-50 text-opacity-90 overflow-x-hidden`}
       >
-        <Script
-          src="https://calendar.google.com/calendar/scheduling-button/index.js"
-          strategy="lazyOnload"
-        />
         <LocalBusinessJSONLD />
         <CookieProvider>
           <ScrollToTop />
@@ -80,8 +75,7 @@ export default function RootLayout({
 
           <Toaster position="top-right" />
           <CookieBanner />
-          <Analytics />
-          <SpeedInsights />
+          <AnalyticsWrapper />
         </CookieProvider>
       </body>
     </html>
